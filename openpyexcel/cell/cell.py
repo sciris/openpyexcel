@@ -82,6 +82,7 @@ class Cell(StyleableObject):
         'row',
         'col_idx',
         '_value',
+        '_formula',
         'data_type',
         'parent',
         '_hyperlink',
@@ -92,6 +93,7 @@ class Cell(StyleableObject):
 
     TYPE_STRING = 's'
     TYPE_FORMULA = 'f'
+    TYPE_FORMULA_CACHED = '!fc' # CK: Added new type
     TYPE_NUMERIC = 'n'
     TYPE_BOOL = 'b'
     TYPE_NULL = 'n'
@@ -99,20 +101,23 @@ class Cell(StyleableObject):
     TYPE_ERROR = 'e'
     TYPE_FORMULA_CACHE_STRING = 'str'
 
-    VALID_TYPES = (TYPE_STRING, TYPE_FORMULA, TYPE_NUMERIC, TYPE_BOOL,
+    VALID_TYPES = (TYPE_STRING, TYPE_FORMULA, TYPE_FORMULA_CACHED, TYPE_NUMERIC, TYPE_BOOL,
                    TYPE_NULL, TYPE_INLINE, TYPE_ERROR, TYPE_FORMULA_CACHE_STRING)
 
 
-    def __init__(self, worksheet, column=None, row=None, value=None, col_idx=None, style_array=None):
+    def __init__(self, worksheet, column=None, row=None, value=None, formula=None, col_idx=None, style_array=None):
         super(Cell, self).__init__(worksheet, style_array)
         self.row = row
         """Row number of this cell (1-based)"""
         # _value is the stored value, while value is the displayed value
         self._value = None
+        self._formula = None
         self._hyperlink = None
         self.data_type = 'n'
         if value is not None:
             self.value = value
+        if formula is not None:
+            self.formula = formula
         self._comment = None
         if column is not None:
             col_idx = column_index_from_string(column)
@@ -202,6 +207,12 @@ class Cell(StyleableObject):
                 self.data_type = self.TYPE_ERROR
             elif self.guess_types:
                 value = self._infer_value(value)
+        
+        elif isinstance(value, tuple): # CK: for reading a formula and stored value
+            print('OKAY')
+            self.data_type = self.TYPE_FORMULA_CACHED
+            self._formula = value[0]
+            self._value = value[1]
 
         elif value is not None:
             raise ValueError("Cannot convert {0!r} to Excel".format(value))

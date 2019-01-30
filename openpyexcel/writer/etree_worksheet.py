@@ -91,9 +91,13 @@ def etree_write_cell(xf, worksheet, cell, styled=None):
     if cell.data_type == 'f':
         shared_formula = worksheet.formula_attributes.get(coordinate, {})
         formula = SubElement(el, 'f', shared_formula)
-        if value is not None:
-            formula.text = value[1:]
-            value = None
+        if value is not None: # CK: Allow writing formulas and values
+            if isinstance(value, tuple):
+                formula.text = value[0][1:]
+                value = value[1]
+            else:
+                formula.text = value[1:]
+                value = None
 
     if cell.data_type == 's':
         value = worksheet.parent.shared_strings.add(value)
@@ -141,7 +145,8 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
             with xf.element('f', shared_formula):
                 if value is not None:
                     xf.write(value[1:])
-                    value = None
+                    value = None # CK: WARNING, may need to fix
+                    print('WARNING, may need to fix')
 
         if cell.data_type == 's':
             value = worksheet.parent.shared_strings.add(value)
