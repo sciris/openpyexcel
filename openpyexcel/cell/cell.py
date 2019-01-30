@@ -180,8 +180,6 @@ class Cell(StyleableObject):
     def _bind_value(self, value, return_output=False):
         """Given a value, infer the correct data type"""
         
-        print('??????? %s' % repr(value))
-
         data_type = "n"
 
         if value is True or value is False:
@@ -208,7 +206,6 @@ class Cell(StyleableObject):
         elif isinstance(value, tuple): # CK: for reading a formula and stored value
             data_type = self.TYPE_FORMULA
             value = (value[0], self._infer_value(value[1])) # Ensure it has the correct value
-            print('DKFJDKFJDKJFD %s' % repr(value))
 
         elif value is not None:
             raise ValueError("Cannot convert {0!r} to Excel".format(value))
@@ -222,7 +219,6 @@ class Cell(StyleableObject):
 
     def _infer_value(self, value, return_output=False):
         """Given a string, infer type and formatting options."""
-        print('INFERRING %s' % repr(value))
         if not isinstance(value, unicode):
             value = str(value)
 
@@ -235,14 +231,13 @@ class Cell(StyleableObject):
             # time detection
             v = self._cast_time(value)
         if v is not None:
-            print('WAS INFERED AS %s' % repr(v))
             if return_output:
                 return (v, self.TYPE_NUMERIC)
             else:
                 self.data_type = self.TYPE_NUMERIC
                 return v
         
-        if return_output:
+        if return_output: # WARNING, HACKY
             return (value, self.data_type)
         else:
             return value
