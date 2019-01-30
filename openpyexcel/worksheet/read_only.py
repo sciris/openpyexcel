@@ -171,7 +171,7 @@ class ReadOnlyWorksheet(object):
                 value = None
 
                 formula = cell.findtext(FORMULA_TAG)
-                if formula is not None and not data_only:
+                if formula is not None and (self.data_only == 'both' or not data_only):
                     data_type = 'f'
                     value = "=%s" % formula
                     if data_only == 'both':
