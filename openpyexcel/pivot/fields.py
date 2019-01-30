@@ -1,7 +1,7 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     DateTime,
     Bool,
@@ -10,7 +10,7 @@ from openpyxl.descriptors import (
     Integer,
     Sequence,
 )
-from openpyxl.descriptors.excel import HexBinary
+from openpyexcel.descriptors.excel import HexBinary
 
 class Index(Serialisable):
 

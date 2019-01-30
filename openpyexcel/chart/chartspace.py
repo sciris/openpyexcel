@@ -1,15 +1,15 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """
 Enclosing chart object. The various chart types are actually child objects.
 Will probably need to call this indirectly
 """
 
-from openpyxl.compat import unicode
+from openpyexcel.compat import unicode
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Bool,
     Float,
     Typed,
@@ -21,12 +21,12 @@ from openpyxl.descriptors import (
     Sequence,
     Typed,
 )
-from openpyxl.descriptors.excel import (
+from openpyexcel.descriptors.excel import (
     Percentage,
     ExtensionList,
     Relation
 )
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedBool,
     NestedNoneSet,
     NestedInteger,
@@ -34,9 +34,9 @@ from openpyxl.descriptors.nested import (
     NestedMinMax,
     NestedText,
 )
-from openpyxl.xml.constants import CHART_NS
+from openpyexcel.xml.constants import CHART_NS
 
-from openpyxl.drawing.colors import ColorMapping
+from openpyexcel.drawing.colors import ColorMapping
 from .text import Text, RichText
 from .shapes import GraphicalProperties
 from .legend import Legend

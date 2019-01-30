@@ -1,15 +1,15 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import re
 
-from openpyxl.compat import unicode, long
+from openpyexcel.compat import unicode, long
 
-from openpyxl.cell import Cell
-from openpyxl.utils import get_column_letter
-from openpyxl.utils.datetime import from_excel
-from openpyxl.styles import is_date_format
-from openpyxl.styles.numbers import BUILTIN_FORMATS
+from openpyexcel.cell import Cell
+from openpyexcel.utils import get_column_letter
+from openpyexcel.utils.datetime import from_excel
+from openpyexcel.styles import is_date_format
+from openpyexcel.styles.numbers import BUILTIN_FORMATS
 
 
 FLOAT_REGEX = re.compile(r"\.|[E-e]")

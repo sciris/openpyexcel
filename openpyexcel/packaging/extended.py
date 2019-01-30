@@ -1,20 +1,20 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import unicode
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.compat import unicode
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
 )
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedText,
 )
 
-from openpyxl.xml.constants import XPROPS_NS
+from openpyexcel.xml.constants import XPROPS_NS
 
 
 def get_version():
-    from openpyxl import __version__
+    from openpyexcel import __version__
 
     VERSION = ".".join(__version__.split(".")[:2])
     return VERSION

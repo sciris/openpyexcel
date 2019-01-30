@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 # test imports
 import pytest
@@ -6,9 +6,9 @@ import pytest
 from itertools import islice
 
 # package imports
-from openpyxl.workbook import Workbook
-from openpyxl.cell import Cell
-from openpyxl.utils.exceptions import NamedRangeException
+from openpyexcel.workbook import Workbook
+from openpyexcel.cell import Cell
+from openpyexcel.utils.exceptions import NamedRangeException
 
 
 class DummyWorkbook:
@@ -237,7 +237,7 @@ class TestWorksheet:
 
 
     def test_append_cell(self, Worksheet):
-        from openpyxl.cell import Cell
+        from openpyexcel.cell import Cell
 
         cell = Cell(None, 'A', 1, 25)
 
@@ -579,7 +579,7 @@ def test_max_row(Worksheet):
 
 
 def test_add_chart(Worksheet):
-    from openpyxl.chart import BarChart
+    from openpyexcel.chart import BarChart
     ws = Worksheet(DummyWorkbook())
     chart = BarChart()
     ws.add_chart(chart, "A1")
@@ -588,7 +588,7 @@ def test_add_chart(Worksheet):
 
 @pytest.mark.pil_required
 def test_add_image(Worksheet):
-    from openpyxl.drawing.image import Image
+    from openpyexcel.drawing.image import Image
     from PIL.Image import Image as PILImage
 
     ws = Worksheet(DummyWorkbook())

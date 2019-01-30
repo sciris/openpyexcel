@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from io import BytesIO
-from openpyxl.xml.functions import fromstring
+from openpyexcel.xml.functions import fromstring
 from zipfile import ZipFile
 
 import pytest
@@ -11,12 +11,12 @@ import pytest
 CHARTSHEET_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet"
 WORKSHEET_REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet"
 
-from openpyxl.utils.datetime import (
+from openpyexcel.utils.datetime import (
     CALENDAR_MAC_1904,
     CALENDAR_WINDOWS_1900,
 )
-from openpyxl.workbook.protection import WorkbookProtection
-from openpyxl.xml.constants import (
+from openpyexcel.workbook.protection import WorkbookProtection
+from openpyexcel.xml.constants import (
     ARC_WORKBOOK,
     ARC_WORKBOOK_RELS,
 )
@@ -75,7 +75,7 @@ class TestWorkbookParser:
 
 
     def test_broken_sheet_ref(self, datadir, recwarn, WorkbookParser):
-        from openpyxl.workbook.parser import WorkbookPackage
+        from openpyexcel.workbook.parser import WorkbookPackage
         datadir.chdir()
         with open("workbook_missing_id.xml", "rb") as src:
             xml = src.read()

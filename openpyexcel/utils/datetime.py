@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from __future__ import division
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Manage Excel date weirdness."""
 

@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
 # compatibility imports
-from openpyxl.compat import unicode
+from openpyexcel.compat import unicode
 
 # package imports
-from openpyxl.styles import numbers
-from openpyxl.reader.excel import load_workbook
+from openpyexcel.styles import numbers
+from openpyexcel.reader.excel import load_workbook
 
 
 @pytest.mark.parametrize("cell, number_format",

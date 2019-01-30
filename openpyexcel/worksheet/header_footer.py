@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 # Simplified implementation of headers and footers: let worksheets have separate items
 
 import re
 from warnings import warn
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Alias,
     Bool,
     Strict,
@@ -15,11 +15,11 @@ from openpyxl.descriptors import (
     MatchPattern,
     Typed,
 )
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.serialisable import Serialisable
 
-from openpyxl.compat import unicode
-from openpyxl.xml.functions import Element
-from openpyxl.utils.escape import escape, unescape
+from openpyexcel.compat import unicode
+from openpyexcel.xml.functions import Element
+from openpyexcel.utils.escape import escape, unescape
 
 
 FONT_PATTERN = '&"(?P<font>.+)"'

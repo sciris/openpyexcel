@@ -1,11 +1,11 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl import Workbook, load_workbook
-from openpyxl.comments import Comment
-from openpyxl.styles import Font
+from openpyexcel import Workbook, load_workbook
+from openpyexcel.comments import Comment
+from openpyexcel.styles import Font
 
 
 def compare_cells(source_cell, target_cell):

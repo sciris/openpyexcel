@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 
 from ..cell_style import StyleArray
 
@@ -193,8 +193,8 @@ class TestStylesheet:
 
 
     def test_named_styles(self, datadir, Stylesheet):
-        from openpyxl.styles.fills import DEFAULT_EMPTY_FILL
-        from openpyxl.styles.borders import Border
+        from openpyexcel.styles.fills import DEFAULT_EMPTY_FILL
+        from openpyexcel.styles.borders import Border
 
         datadir.chdir()
         with open("complex-styles.xml") as src:
@@ -223,7 +223,7 @@ class TestStylesheet:
 
 
     def test_split_named_styles(self, Stylesheet):
-        from openpyxl.workbook import Workbook
+        from openpyexcel.workbook import Workbook
         import copy
         wb = Workbook()
         new_style = copy.copy(wb._named_styles[0])
@@ -244,7 +244,7 @@ def test_no_styles():
     from ..stylesheet import apply_stylesheet
     from zipfile import ZipFile
     from io import BytesIO
-    from openpyxl.workbook import Workbook
+    from openpyexcel.workbook import Workbook
     wb1 = wb2 = Workbook()
     archive = ZipFile(BytesIO(), "a")
     apply_stylesheet(archive, wb1)
@@ -254,7 +254,7 @@ def test_no_styles():
 
 
 def test_write_worksheet(Stylesheet):
-    from openpyxl import Workbook
+    from openpyexcel import Workbook
     wb = Workbook()
     from ..stylesheet import write_stylesheet
     node = write_stylesheet(wb)
@@ -306,7 +306,7 @@ def test_write_worksheet(Stylesheet):
 
 def test_simple_styles(datadir):
     import datetime
-    from openpyxl import Workbook
+    from openpyexcel import Workbook
     from ..protection import Protection
     from .. import numbers
     from ..stylesheet import write_stylesheet

@@ -7,7 +7,7 @@ import pytest
 @pytest.fixture
 def Image():
     """Image class"""
-    from openpyxl.drawing import Image
+    from openpyexcel.drawing import Image
     return Image
 
 

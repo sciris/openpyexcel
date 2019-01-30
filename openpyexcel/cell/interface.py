@@ -1,7 +1,7 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat.abc import ABC
+from openpyexcel.compat.abc import ABC
 from abc import abstractmethod, abstractproperty
 
 

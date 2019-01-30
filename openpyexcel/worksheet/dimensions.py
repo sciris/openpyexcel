@@ -1,15 +1,15 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from copy import copy
 
-from openpyxl.compat import safe_string, deprecated
-from openpyxl.utils import (
+from openpyexcel.compat import safe_string, deprecated
+from openpyexcel.utils import (
     get_column_interval,
     column_index_from_string,
     range_boundaries,
 )
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Integer,
     Float,
     Bool,
@@ -17,12 +17,12 @@ from openpyxl.descriptors import (
     String,
     Alias,
 )
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.styles.styleable import StyleableObject
-from openpyxl.styles.cell_style import StyleArray
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.styles.styleable import StyleableObject
+from openpyexcel.styles.cell_style import StyleArray
 
-from openpyxl.utils.bound_dictionary import BoundDictionary
-from openpyxl.xml.functions import Element
+from openpyexcel.utils.bound_dictionary import BoundDictionary
+from openpyexcel.xml.functions import Element
 
 
 class Dimension(Strict, StyleableObject):

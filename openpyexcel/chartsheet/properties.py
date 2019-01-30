@@ -1,13 +1,13 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Bool,
     String,
     Typed
 )
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.styles import Color
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.styles import Color
 
 
 class ChartsheetProperties(Serialisable):

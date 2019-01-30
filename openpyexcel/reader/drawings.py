@@ -1,16 +1,16 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from io import BytesIO
 from warnings import warn
 
-from openpyxl.xml.functions import fromstring
-from openpyxl.xml.constants import IMAGE_NS
-from openpyxl.packaging.relationship import get_rel, get_rels_path, get_dependents
-from openpyxl.drawing.spreadsheet_drawing import SpreadsheetDrawing
-from openpyxl.drawing.image import Image, PILImage
-from openpyxl.chart.chartspace import ChartSpace
-from openpyxl.chart.reader import read_chart
+from openpyexcel.xml.functions import fromstring
+from openpyexcel.xml.constants import IMAGE_NS
+from openpyexcel.packaging.relationship import get_rel, get_rels_path, get_dependents
+from openpyexcel.drawing.spreadsheet_drawing import SpreadsheetDrawing
+from openpyexcel.drawing.image import Image, PILImage
+from openpyexcel.chart.chartspace import ChartSpace
+from openpyexcel.chart.reader import read_chart
 
 
 def find_images(archive, path):

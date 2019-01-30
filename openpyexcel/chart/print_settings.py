@@ -1,20 +1,20 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Float,
     Typed,
     Alias,
 )
 
-from openpyxl.worksheet.page import PrintPageSetup
-from openpyxl.worksheet.header_footer import HeaderFooter
+from openpyexcel.worksheet.page import PrintPageSetup
+from openpyexcel.worksheet.header_footer import HeaderFooter
 
 
 class PageMargins(Serialisable):
     """
-    Identical to openpyxl.worksheet.page.Pagemargins but element names are different :-/
+    Identical to openpyexcel.worksheet.page.Pagemargins but element names are different :-/
     """
     tagname = "pageMargins"
 

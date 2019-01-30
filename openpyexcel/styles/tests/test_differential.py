@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.xml.constants import SHEET_MAIN_NS
 
-from openpyxl.styles import Font, Color, PatternFill
+from openpyexcel.styles import Font, Color, PatternFill
 
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.tests.helper import compare_xml
 
 
 @pytest.fixture

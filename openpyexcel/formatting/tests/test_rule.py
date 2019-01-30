@@ -1,14 +1,14 @@
 # coding=utf8
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.styles import Color
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.styles import Color
 
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.tests.helper import compare_xml
 
 
 @pytest.fixture
@@ -288,7 +288,7 @@ class TestRule:
 
 def test_formula_rule():
     from ..rule import FormulaRule
-    from openpyxl.styles.differential import DifferentialStyle
+    from openpyexcel.styles.differential import DifferentialStyle
 
     cf = FormulaRule(formula=['ISBLANK(C1)'], stopIfTrue=True)
     assert dict(cf) == {'priority': '0', 'stopIfTrue': '1', 'type': 'expression'}
@@ -298,7 +298,7 @@ def test_formula_rule():
 
 def test_cellis_rule():
     from ..rule import CellIsRule
-    from openpyxl.styles import PatternFill
+    from openpyexcel.styles import PatternFill
 
     red_fill = PatternFill(start_color='FFEE1111', end_color='FFEE1111',
                            fill_type='solid')

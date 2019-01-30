@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Worksheet is the 2nd-level container in Excel."""
 
@@ -12,7 +12,7 @@ from inspect import isgenerator
 from warnings import warn
 
 # compatibility imports
-from openpyxl.compat import (
+from openpyexcel.compat import (
     unicode,
     range,
     basestring,
@@ -21,7 +21,7 @@ from openpyxl.compat import (
 )
 
 # package imports
-from openpyxl.utils import (
+from openpyexcel.utils import (
     coordinate_from_string,
     column_index_from_string,
     get_column_letter,
@@ -30,23 +30,23 @@ from openpyxl.utils import (
     coordinate_to_tuple,
     absolute_coordinate,
 )
-from openpyxl.utils.cell import COORD_RE
+from openpyexcel.utils.cell import COORD_RE
 
-from openpyxl.cell import Cell
-from openpyxl.utils.exceptions import (
+from openpyexcel.cell import Cell
+from openpyexcel.utils.exceptions import (
     SheetTitleException,
     NamedRangeException
 )
-from openpyxl.utils.units import (
+from openpyexcel.utils.units import (
     points_to_pixels,
     DEFAULT_COLUMN_WIDTH,
     DEFAULT_ROW_HEIGHT,
 )
-from openpyxl.formatting.formatting import ConditionalFormattingList
-from openpyxl.packaging.relationship import RelationshipList
-from openpyxl.workbook.child import _WorkbookChild
-from openpyxl.workbook.defined_name import COL_RANGE_RE, ROW_RANGE_RE
-from openpyxl.utils.bound_dictionary import BoundDictionary
+from openpyexcel.formatting.formatting import ConditionalFormattingList
+from openpyexcel.packaging.relationship import RelationshipList
+from openpyexcel.workbook.child import _WorkbookChild
+from openpyexcel.workbook.defined_name import COL_RANGE_RE, ROW_RANGE_RE
+from openpyexcel.utils.bound_dictionary import BoundDictionary
 
 from .datavalidation import DataValidationList
 from .page import (
@@ -85,7 +85,7 @@ class Worksheet(_WorkbookChild):
     """Represents a worksheet.
 
     Do not create worksheets yourself,
-    use :func:`openpyxl.workbook.Workbook.create_sheet` instead
+    use :func:`openpyexcel.workbook.Workbook.create_sheet` instead
 
     """
 
@@ -289,7 +289,7 @@ class Worksheet(_WorkbookChild):
         :param value: value of the cell (e.g. 5)
         :type value: numeric or time or string or bool or none
 
-        :rtype: openpyxl.cell.cell.Cell
+        :rtype: openpyexcel.cell.cell.Cell
         """
 
         if row < 1 or column < 1:
@@ -628,7 +628,7 @@ class Worksheet(_WorkbookChild):
         :param range_name: `named range` name
         :type range_name: string
 
-        :rtype: tuple[tuple[openpyxl.cell.cell.Cell]]
+        :rtype: tuple[tuple[openpyexcel.cell.cell.Cell]]
         """
         defn = self.parent.defined_names[range_name]
         if defn.localSheetId and defn.localSheetId != self.parent.get_index(self):
@@ -885,8 +885,8 @@ class Worksheet(_WorkbookChild):
 
 
     def _write(self):
-        from openpyxl.drawing.spreadsheet_drawing import SpreadsheetDrawing
-        from openpyxl.writer.worksheet import write_worksheet
+        from openpyexcel.drawing.spreadsheet_drawing import SpreadsheetDrawing
+        from openpyexcel.writer.worksheet import write_worksheet
         self._drawing = SpreadsheetDrawing()
         self._drawing.charts = self._charts
         self._drawing.images = self._images

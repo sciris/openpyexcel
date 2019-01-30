@@ -1,11 +1,11 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
-from openpyxl.compat.numbers import NUMPY, PANDAS
-from openpyxl.xml import DEFUSEDXML, LXML
-from openpyxl.workbook import Workbook
-from openpyxl.reader.excel import load_workbook
-import openpyxl._constants as constants
+from openpyexcel.compat.numbers import NUMPY, PANDAS
+from openpyexcel.xml import DEFUSEDXML, LXML
+from openpyexcel.workbook import Workbook
+from openpyexcel.reader.excel import load_workbook
+import openpyexcel._constants as constants
 
 # Expose constants especially the version number
 

@@ -1,18 +1,18 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from collections import OrderedDict
-from openpyxl.compat import safe_string
+from openpyexcel.compat import safe_string
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Typed,
     Integer,
     Bool,
     String,
     Sequence,
 )
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.serialisable import Serialisable
 
 from .fills import PatternFill, Fill
 from .fonts import Font

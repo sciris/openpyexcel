@@ -1,16 +1,16 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Alias,
     Typed,
     Sequence
 )
-from openpyxl.descriptors.sequence import NestedSequence
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.utils.indexed_list import IndexedList
-from openpyxl.xml.constants import ARC_STYLE, SHEET_MAIN_NS
-from openpyxl.xml.functions import fromstring
+from openpyexcel.descriptors.sequence import NestedSequence
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.utils.indexed_list import IndexedList
+from openpyexcel.xml.constants import ARC_STYLE, SHEET_MAIN_NS
+from openpyexcel.xml.functions import fromstring
 
 from .colors import ColorList, COLOR_INDEX
 from .differential import DifferentialStyle
@@ -188,7 +188,7 @@ def apply_stylesheet(archive, wb):
     wb._alignments = stylesheet.alignments
     wb._table_styles = stylesheet.tableStyles
 
-    # need to overwrite openpyxl defaults in case workbook has different ones
+    # need to overwrite openpyexcel defaults in case workbook has different ones
     wb._cell_styles = stylesheet.cell_styles
     wb._named_styles = stylesheet.named_styles
 

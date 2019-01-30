@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Write the shared string table."""
 from io import BytesIO
 
 # package imports
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.xml.functions import Element, xmlfile, SubElement
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import Element, xmlfile, SubElement
 
 PRESERVE_SPACE = '{%s}space' % "http://www.w3.org/XML/1998/namespace"
 

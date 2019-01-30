@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
 """
@@ -10,8 +10,8 @@ http://chimera.labs.oreilly.com/books/1230000000393/ch08.html#_discussion_130
 import datetime
 import re
 
-from openpyxl.compat import basestring, bytes, long
-from openpyxl.utils.datetime import from_ISO8601
+from openpyexcel.compat import basestring, bytes, long
+from openpyexcel.utils.datetime import from_ISO8601
 
 from .namespace import namespaced
 

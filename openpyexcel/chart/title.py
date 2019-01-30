@@ -1,22 +1,22 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import basestring
+from openpyexcel.compat import basestring
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Alias,
 )
 
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.descriptors.nested import NestedBool
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.nested import NestedBool
 
 from .text import Text, RichText
 from .layout import Layout
 from .shapes import GraphicalProperties
 
-from openpyxl.drawing.text import (
+from openpyexcel.drawing.text import (
     Paragraph,
     RegularTextRun,
     LineBreak

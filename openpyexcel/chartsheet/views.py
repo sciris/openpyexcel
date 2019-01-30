@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Bool,
     Integer,
     Typed,
     Sequence
 )
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.serialisable import Serialisable
 
 
 class ChartsheetView(Serialisable):

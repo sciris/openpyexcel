@@ -1,7 +1,7 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     String,
     Integer,
@@ -11,8 +11,8 @@ from openpyxl.descriptors import (
     Sequence,
     Alias
 )
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.nested import (
     NestedNoneSet,
     NestedBool,
     NestedString,

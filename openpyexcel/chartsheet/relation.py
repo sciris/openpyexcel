@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Integer,
     Alias
 )
-from openpyxl.descriptors.excel import Relation
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.excel import Relation
+from openpyexcel.descriptors.serialisable import Serialisable
 
 
 class SheetBackgroundPicture(Serialisable):

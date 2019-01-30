@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
-from openpyxl.drawing.image import Image
-from openpyxl.chart import BarChart
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
+from openpyexcel.drawing.image import Image
+from openpyexcel.chart import BarChart
 
 
 @pytest.fixture
@@ -223,7 +223,7 @@ class TestSpreadsheetDrawing:
 
 
     def test_write_chart(self, SpreadsheetDrawing):
-        from openpyxl.chart._chart import ChartBase
+        from openpyexcel.chart._chart import ChartBase
 
         class Chart(ChartBase):
 
@@ -326,7 +326,7 @@ class TestSpreadsheetDrawing:
 
 
     def test_write_rels(self, SpreadsheetDrawing):
-        from openpyxl.packaging.relationship import Relationship
+        from openpyexcel.packaging.relationship import Relationship
         rel = Relationship(type="drawing", Target="../file.xml")
         drawing = SpreadsheetDrawing()
         drawing._rels.append(rel)

@@ -1,13 +1,13 @@
 from __future__ import absolute_import
 # coding: utf-8
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 # package imports
-from openpyxl.workbook import Workbook
-from openpyxl.workbook.defined_name import DefinedName
-from openpyxl.utils.exceptions import ReadOnlyWorkbookException
+from openpyexcel.workbook import Workbook
+from openpyexcel.workbook.defined_name import DefinedName
+from openpyexcel.utils.exceptions import ReadOnlyWorkbookException
 
-from openpyxl.xml.constants import (
+from openpyexcel.xml.constants import (
     XLSM,
     XLSX,
     XLTM,
@@ -29,7 +29,7 @@ class TestWorkbook:
                              ]
                              )
     def test_template(self, has_vba, as_template, content_type):
-        from openpyxl.workbook import Workbook
+        from openpyexcel.workbook import Workbook
         wb = Workbook()
         wb.vba_archive = has_vba
         wb.template = as_template

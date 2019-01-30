@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Bool,
     NoneSet,
@@ -10,26 +10,26 @@ from openpyxl.descriptors import (
     Sequence,
     Alias,
 )
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedText,
     NestedNoneSet,
 )
-from openpyxl.descriptors.excel import Relation
+from openpyexcel.descriptors.excel import Relation
 
-from openpyxl.packaging.relationship import (
+from openpyexcel.packaging.relationship import (
     Relationship,
     RelationshipList,
 )
-from openpyxl.utils import coordinate_to_tuple
-from openpyxl.utils.units import (
+from openpyexcel.utils import coordinate_to_tuple
+from openpyexcel.utils.units import (
     cm_to_EMU,
     pixels_to_EMU,
 )
-from openpyxl.drawing.image import Image
+from openpyexcel.drawing.image import Image
 
-from openpyxl.xml.constants import SHEET_DRAWING_NS
+from openpyexcel.xml.constants import SHEET_DRAWING_NS
 
-from openpyxl.chart._chart import ChartBase
+from openpyexcel.chart._chart import ChartBase
 from .xdr import (
     XDRPoint2D,
     XDRPositiveSize2D,

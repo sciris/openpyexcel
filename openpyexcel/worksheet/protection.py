@@ -1,18 +1,18 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Bool,
     String,
     Alias,
     Integer,
 )
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors.excel import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.excel import (
     HexBinary,
     Base64Binary,
 )
-from openpyxl.utils.protection import hash_password
+from openpyexcel.utils.protection import hash_password
 
 
 class _Protected(object):

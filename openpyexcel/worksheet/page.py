@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Float,
     Bool,
     Integer,
@@ -10,7 +10,7 @@ from openpyxl.descriptors import (
     NoneSet,
     Alias,
     )
-from openpyxl.descriptors.excel import UniversalMeasure, Relation
+from openpyexcel.descriptors.excel import UniversalMeasure, Relation
 
 
 class PrintPageSetup(Serialisable):

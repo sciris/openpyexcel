@@ -1,11 +1,11 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from collections import OrderedDict
 
-from openpyxl.compat import basestring
+from openpyexcel.compat import basestring
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Typed,
     Integer,
     Alias,
@@ -13,10 +13,10 @@ from openpyxl.descriptors import (
     Bool,
     Set,
 )
-from openpyxl.descriptors.nested import Nested
-from openpyxl.descriptors.sequence import NestedSequence, ValueSequence
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.xml.constants import PACKAGE_CHARTS
+from openpyexcel.descriptors.nested import Nested
+from openpyexcel.descriptors.sequence import NestedSequence, ValueSequence
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.xml.constants import PACKAGE_CHARTS
 
 from ._3d import _3DBase
 from .data_source import AxDataSource, NumRef

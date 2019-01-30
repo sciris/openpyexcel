@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from io import BytesIO
 from tempfile import NamedTemporaryFile
 from zipfile import BadZipfile, ZipFile
 
-from openpyxl.packaging.manifest import Manifest, Override
-from openpyxl.utils.exceptions import InvalidFileException
-from openpyxl.xml.functions import fromstring
-from openpyxl.xml.constants import (
+from openpyexcel.packaging.manifest import Manifest, Override
+from openpyexcel.utils.exceptions import InvalidFileException
+from openpyexcel.xml.functions import fromstring
+from openpyexcel.xml.constants import (
     ARC_WORKBOOK,
     XLSM,
     XLSX,
@@ -34,7 +34,7 @@ def test_read_empty_file(datadir, load_workbook):
 def test_load_workbook_from_fileobj(datadir, load_workbook):
     """ can a workbook be loaded from a file object without exceptions
     This tests for regressions of
-    https://bitbucket.org/openpyxl/openpyxl/issue/433
+    https://bitbucket.org/openpyexcel/openpyexcel/issue/433
     """
     datadir.chdir()
     with open('empty_with_no_properties.xlsx', 'rb') as f:
@@ -117,7 +117,7 @@ def test_close_read(datadir, load_workbook, ro):
 
 @pytest.mark.parametrize("wo", [False, True])
 def test_close_write(wo):
-    from openpyxl.workbook import Workbook
+    from openpyexcel.workbook import Workbook
     wb = Workbook(write_only=wo)
     wb.close()
 

@@ -2,9 +2,9 @@
 Collection of utility primitives for charts.
 """
 
-from openpyxl.compat import unicode
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.compat import unicode
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Bool,
     Typed,
     Alias,
@@ -12,8 +12,8 @@ from openpyxl.descriptors import (
     Integer,
     Sequence,
 )
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.nested import (
     NestedString,
     NestedText,
     NestedInteger,

@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """
 Collection of utilities used within the package and also available for client code
 """
 import re
 
-from openpyxl.compat import basestring
+from openpyexcel.compat import basestring
 from .exceptions import CellCoordinatesException
 
 # constants

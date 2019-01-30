@@ -1,18 +1,18 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 # package imports
-from openpyxl.reader.excel import load_workbook
-from openpyxl.xml.functions import tostring, fromstring
-from openpyxl.writer.worksheet import write_conditional_formatting
-from openpyxl.styles import Border, Side, PatternFill, Color, Font, fills, borders, colors
-from openpyxl.styles.differential import DifferentialStyle, DifferentialStyleList
-from openpyxl.formatting.formatting import ConditionalFormattingList
-from openpyxl.formatting.rule import CellIsRule, FormulaRule, Rule
+from openpyexcel.reader.excel import load_workbook
+from openpyexcel.xml.functions import tostring, fromstring
+from openpyexcel.writer.worksheet import write_conditional_formatting
+from openpyexcel.styles import Border, Side, PatternFill, Color, Font, fills, borders, colors
+from openpyexcel.styles.differential import DifferentialStyle, DifferentialStyleList
+from openpyexcel.formatting.formatting import ConditionalFormattingList
+from openpyexcel.formatting.rule import CellIsRule, FormulaRule, Rule
 
 # test imports
 import pytest
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.tests.helper import compare_xml
 
 
 class DummyWorkbook():
@@ -72,7 +72,7 @@ class TestConditionalFormattingList(object):
                                     color=Color(colors.BLACK)))
         cf.add('C1:C10', FormulaRule(formula=['ISBLANK(C1)'], font=font, border=border, fill=fill))
         cf.add('D1:D10', FormulaRule(formula=['ISBLANK(D1)'], fill=fill))
-        from openpyxl.writer.worksheet import write_conditional_formatting
+        from openpyexcel.writer.worksheet import write_conditional_formatting
         for _ in write_conditional_formatting(ws):
             pass # exhaust generator
 
@@ -101,7 +101,7 @@ class TestConditionalFormattingList(object):
                                       CellIsRule(operator='equal', formula=['"Fail"'], stopIfTrue=False,
                                                  font=whiteFont, fill=redFill))
 
-        from openpyxl.writer.worksheet import write_conditional_formatting
+        from openpyexcel.writer.worksheet import write_conditional_formatting
 
         # First, verify conditional formatting xml
         cfs = write_conditional_formatting(ws)

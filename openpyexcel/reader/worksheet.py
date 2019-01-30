@@ -1,55 +1,55 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Reader for a single worksheet."""
 from io import BytesIO
 from warnings import warn
 
 # compatibility imports
-from openpyxl.xml.functions import iterparse
+from openpyexcel.xml.functions import iterparse
 
 # package imports
-from openpyxl.cell import Cell
-from openpyxl.worksheet.filters import AutoFilter, SortState
-from openpyxl.cell.read_only import _cast_number
-from openpyxl.cell.text import Text
-from openpyxl.worksheet import Worksheet
-from openpyxl.worksheet.dimensions import (
+from openpyexcel.cell import Cell
+from openpyexcel.worksheet.filters import AutoFilter, SortState
+from openpyexcel.cell.read_only import _cast_number
+from openpyexcel.cell.text import Text
+from openpyexcel.worksheet import Worksheet
+from openpyexcel.worksheet.dimensions import (
     ColumnDimension,
     RowDimension,
     SheetFormatProperties,
 )
-from openpyxl.worksheet.header_footer import HeaderFooter
-from openpyxl.worksheet.hyperlink import Hyperlink
-from openpyxl.worksheet.merge import MergeCells
-from openpyxl.worksheet.cell_range import CellRange
-from openpyxl.worksheet.page import PageMargins, PrintOptions, PrintPageSetup
-from openpyxl.worksheet.pagebreak import PageBreak
-from openpyxl.worksheet.protection import SheetProtection
-from openpyxl.worksheet.views import SheetViewList
-from openpyxl.worksheet.datavalidation import DataValidationList
-from openpyxl.xml.constants import (
+from openpyexcel.worksheet.header_footer import HeaderFooter
+from openpyexcel.worksheet.hyperlink import Hyperlink
+from openpyexcel.worksheet.merge import MergeCells
+from openpyexcel.worksheet.cell_range import CellRange
+from openpyexcel.worksheet.page import PageMargins, PrintOptions, PrintPageSetup
+from openpyexcel.worksheet.pagebreak import PageBreak
+from openpyexcel.worksheet.protection import SheetProtection
+from openpyexcel.worksheet.views import SheetViewList
+from openpyexcel.worksheet.datavalidation import DataValidationList
+from openpyexcel.xml.constants import (
     SHEET_MAIN_NS,
     REL_NS,
     EXT_TYPES,
     PKG_REL_NS
 )
-from openpyxl.xml.functions import safe_iterator, localname
-from openpyxl.styles import Color
-from openpyxl.styles import is_date_format
-from openpyxl.formatting import Rule
-from openpyxl.formatting.formatting import ConditionalFormatting
-from openpyxl.formula.translate import Translator
-from openpyxl.worksheet.properties import WorksheetProperties
-from openpyxl.utils import (
+from openpyexcel.xml.functions import safe_iterator, localname
+from openpyexcel.styles import Color
+from openpyexcel.styles import is_date_format
+from openpyexcel.formatting import Rule
+from openpyexcel.formatting.formatting import ConditionalFormatting
+from openpyexcel.formula.translate import Translator
+from openpyexcel.worksheet.properties import WorksheetProperties
+from openpyexcel.utils import (
     coordinate_from_string,
     get_column_letter,
     column_index_from_string,
     coordinate_to_tuple,
     )
-from openpyxl.utils.datetime import from_excel, from_ISO8601
-from openpyxl.descriptors.excel import ExtensionList, Extension
-from openpyxl.worksheet.table import TablePartList
+from openpyexcel.utils.datetime import from_excel, from_ISO8601
+from openpyexcel.descriptors.excel import ExtensionList, Extension
+from openpyexcel.worksheet.table import TablePartList
 
 
 def _get_xml_iter(xml_source):

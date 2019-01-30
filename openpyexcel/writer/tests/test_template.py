@@ -1,15 +1,15 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from io import BytesIO
 from zipfile import ZipFile
 
 import pytest
 
-from openpyxl.packaging.manifest import Manifest
-from openpyxl.writer.excel import save_virtual_workbook
-from openpyxl.reader.excel import load_workbook
-from openpyxl.xml.constants import ARC_CONTENT_TYPES, XLTM, XLTX, XLSM, XLSX
-from openpyxl.xml.functions import fromstring
+from openpyexcel.packaging.manifest import Manifest
+from openpyexcel.writer.excel import save_virtual_workbook
+from openpyexcel.reader.excel import load_workbook
+from openpyexcel.xml.constants import ARC_CONTENT_TYPES, XLTM, XLTX, XLSM, XLSX
+from openpyexcel.xml.functions import fromstring
 
 
 def check_content_type(workbook_type, archive):

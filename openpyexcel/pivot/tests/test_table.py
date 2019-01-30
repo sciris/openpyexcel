@@ -1,15 +1,15 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
 from io import BytesIO
 from zipfile import ZipFile
 
-from openpyxl.packaging.manifest import Manifest
+from openpyexcel.packaging.manifest import Manifest
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 
 
 @pytest.fixture

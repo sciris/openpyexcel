@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """
 File manifest
@@ -7,10 +7,10 @@ File manifest
 import mimetypes
 import os.path
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import String, Sequence
-from openpyxl.xml.functions import fromstring
-from openpyxl.xml.constants import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import String, Sequence
+from openpyexcel.xml.functions import fromstring
+from openpyexcel.xml.constants import (
     ARC_CORE,
     ARC_CONTENT_TYPES,
     ARC_WORKBOOK,
@@ -34,7 +34,7 @@ from openpyxl.xml.constants import (
     CHARTSHEET_TYPE,
     CONTYPES_NS
 )
-from openpyxl.xml.functions import tostring
+from openpyexcel.xml.functions import tostring
 
 # initialise mime-types
 if not mimetypes.inited:

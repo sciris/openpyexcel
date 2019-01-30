@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Read an xlsx file into Python"""
 
@@ -11,8 +11,8 @@ import os.path
 import warnings
 
 # compatibility imports
-from openpyxl.compat import unicode, file
-from openpyxl.pivot.table import TableDefinition
+from openpyexcel.compat import unicode, file
+from openpyexcel.pivot.table import TableDefinition
 
 # Allow blanket setting of KEEP_VBA for testing
 try:
@@ -22,8 +22,8 @@ except ImportError:
 
 
 # package imports
-from openpyxl.utils.exceptions import InvalidFileException
-from openpyxl.xml.constants import (
+from openpyexcel.utils.exceptions import InvalidFileException
+from openpyexcel.xml.constants import (
     ARC_SHARED_STRINGS,
     ARC_CORE,
     ARC_CONTENT_TYPES,
@@ -38,22 +38,22 @@ from openpyxl.xml.constants import (
     XLSX,
 )
 
-from openpyxl.comments.comment_sheet import CommentSheet
-from openpyxl.workbook import Workbook
+from openpyexcel.comments.comment_sheet import CommentSheet
+from openpyexcel.workbook import Workbook
 
 from .strings import read_string_table
-from openpyxl.styles.stylesheet import apply_stylesheet
+from openpyexcel.styles.stylesheet import apply_stylesheet
 
-from openpyxl.packaging.core import DocumentProperties
-from openpyxl.packaging.manifest import Manifest, Override
-from openpyxl.packaging.workbook import WorkbookParser
-from openpyxl.packaging.relationship import get_dependents, get_rels_path
+from openpyexcel.packaging.core import DocumentProperties
+from openpyexcel.packaging.manifest import Manifest, Override
+from openpyexcel.packaging.workbook import WorkbookParser
+from openpyexcel.packaging.relationship import get_dependents, get_rels_path
 
-from openpyxl.worksheet.read_only import ReadOnlyWorksheet
-from openpyxl.worksheet.table import Table
-from openpyxl.drawing.spreadsheet_drawing import SpreadsheetDrawing
+from openpyexcel.worksheet.read_only import ReadOnlyWorksheet
+from openpyexcel.worksheet.table import Table
+from openpyexcel.drawing.spreadsheet_drawing import SpreadsheetDrawing
 
-from openpyxl.xml.functions import fromstring
+from openpyexcel.xml.functions import fromstring
 
 from .worksheet import WorkSheetParser
 from .drawings import find_images
@@ -72,15 +72,15 @@ def _validate_archive(filename):
         file_format = os.path.splitext(filename)[-1].lower()
         if file_format not in SUPPORTED_FORMATS:
             if file_format == '.xls':
-                msg = ('openpyxl does not support the old .xls file format, '
+                msg = ('openpyexcel does not support the old .xls file format, '
                        'please use xlrd to read this file, or convert it to '
                        'the more recent .xlsx file format.')
             elif file_format == '.xlsb':
-                msg = ('openpyxl does not support binary format .xlsb, '
+                msg = ('openpyexcel does not support binary format .xlsb, '
                        'please convert this file to .xlsx format if you want '
-                       'to open it with openpyxl')
+                       'to open it with openpyexcel')
             else:
-                msg = ('openpyxl does not support %s file format, '
+                msg = ('openpyexcel does not support %s file format, '
                        'please check you can open '
                        'it with Excel first. '
                        'Supported formats are: %s') % (file_format,
@@ -136,11 +136,11 @@ def load_workbook(filename, read_only=False, keep_vba=KEEP_VBA,
     :param keep_links: whether links to external workbooks should be preserved. The default is True
     :type keep_links: bool
 
-    :rtype: :class:`openpyxl.workbook.Workbook`
+    :rtype: :class:`openpyexcel.workbook.Workbook`
 
     .. note::
 
-        When using lazy load, all worksheets will be :class:`openpyxl.worksheet.iter_worksheet.IterableWorksheet`
+        When using lazy load, all worksheets will be :class:`openpyexcel.worksheet.iter_worksheet.IterableWorksheet`
         and the returned workbook will be read-only.
 
     """

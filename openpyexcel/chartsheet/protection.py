@@ -1,11 +1,11 @@
 from __future__ import absolute_import
 import hashlib
 
-from openpyxl.descriptors import (Bool, Integer, String)
-from openpyxl.descriptors.excel import Base64Binary
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (Bool, Integer, String)
+from openpyexcel.descriptors.excel import Base64Binary
+from openpyexcel.descriptors.serialisable import Serialisable
 
-from openpyxl.worksheet.protection import (
+from openpyexcel.worksheet.protection import (
     hash_password,
     _Protected
 )

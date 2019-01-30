@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 #stdlib
 from io import BytesIO
@@ -7,11 +7,11 @@ import os
 
 # test
 import pytest
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.tests.helper import compare_xml
 
 # package
-from openpyxl import Workbook, load_workbook
-from openpyxl.xml.functions import tostring
+from openpyexcel import Workbook, load_workbook
+from openpyexcel.xml.functions import tostring
 from .. excel import (
     save_workbook,
     save_virtual_workbook,

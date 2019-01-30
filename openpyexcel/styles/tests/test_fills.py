@@ -1,22 +1,22 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.styles.colors import BLACK, WHITE, Color
-from openpyxl.xml.functions import tostring, fromstring
+from openpyexcel.styles.colors import BLACK, WHITE, Color
+from openpyexcel.xml.functions import tostring, fromstring
 
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.tests.helper import compare_xml
 
 @pytest.fixture
 def GradientFill():
-    from openpyxl.styles.fills import GradientFill
+    from openpyexcel.styles.fills import GradientFill
     return GradientFill
 
 
 @pytest.fixture
 def Stop():
-    from openpyxl.styles.fills import Stop
+    from openpyexcel.styles.fills import Stop
     return Stop
 
 

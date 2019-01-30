@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
 # Python stdlib imports
@@ -7,10 +7,10 @@ from io import BytesIO
 import zipfile
 
 # package imports
-from openpyxl.reader.excel import load_workbook
-from openpyxl.writer.excel import save_virtual_workbook
-from openpyxl.xml.functions import fromstring
-from openpyxl.xml.constants import CONTYPES_NS
+from openpyexcel.reader.excel import load_workbook
+from openpyexcel.writer.excel import save_virtual_workbook
+from openpyexcel.xml.functions import fromstring
+from openpyexcel.xml.constants import CONTYPES_NS
 
 
 def test_content_types(datadir):

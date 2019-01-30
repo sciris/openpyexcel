@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
 # Python stdlib imports
@@ -15,15 +15,15 @@ import pytest
 
 # package imports
 
-from openpyxl.comments import Comment
-from openpyxl.cell.cell import ERROR_CODES
+from openpyexcel.comments import Comment
+from openpyexcel.cell.cell import ERROR_CODES
 
 
 @pytest.fixture
 def DummyWorksheet():
-    from openpyxl.utils.indexed_list import IndexedList
-    from openpyxl.utils.datetime  import CALENDAR_WINDOWS_1900
-    from openpyxl.cell import Cell
+    from openpyexcel.utils.indexed_list import IndexedList
+    from openpyexcel.utils.datetime  import CALENDAR_WINDOWS_1900
+    from openpyexcel.cell import Cell
 
     class Wb(object):
         epoch = CALENDAR_WINDOWS_1900
@@ -225,8 +225,8 @@ def test_set_bad_type(dummy_cell):
 
 
 def test_illegal_characters(dummy_cell):
-    from openpyxl.utils.exceptions import IllegalCharacterError
-    from openpyxl.compat import range
+    from openpyexcel.utils.exceptions import IllegalCharacterError
+    from openpyexcel.compat import range
     from itertools import chain
     cell = dummy_cell
 
@@ -256,7 +256,7 @@ values = (
 @pytest.mark.parametrize("value, expected",
                              values)
 def test_time_regex(value, expected):
-    from openpyxl.cell.cell import TIME_REGEX
+    from openpyexcel.cell.cell import TIME_REGEX
     m = TIME_REGEX.findall(value)
     assert m == expected
 
@@ -330,7 +330,7 @@ class TestEncoding:
     test_string = ('Compound Value (' + pound + ')').encode('latin1')
 
     def test_bad_encoding(self):
-        from openpyxl import Workbook
+        from openpyexcel import Workbook
 
         wb = Workbook()
         ws = wb.active
@@ -341,7 +341,7 @@ class TestEncoding:
             cell.value = self.test_string
 
     def test_good_encoding(self):
-        from openpyxl import Workbook
+        from openpyexcel import Workbook
 
         wb = Workbook()
         wb.encoding = 'latin1'
@@ -351,7 +351,7 @@ class TestEncoding:
 
 
 def test_font(DummyWorksheet, Cell):
-    from openpyxl.styles import Font
+    from openpyexcel.styles import Font
     font = Font(bold=True)
     ws = DummyWorksheet
     ws.parent._fonts.add(font)
@@ -361,7 +361,7 @@ def test_font(DummyWorksheet, Cell):
 
 
 def test_fill(DummyWorksheet, Cell):
-    from openpyxl.styles import PatternFill
+    from openpyexcel.styles import PatternFill
     fill = PatternFill(patternType="solid", fgColor="FF0000")
     ws = DummyWorksheet
     ws.parent._fills.add(fill)
@@ -371,7 +371,7 @@ def test_fill(DummyWorksheet, Cell):
 
 
 def test_border(DummyWorksheet, Cell):
-    from openpyxl.styles import Border
+    from openpyexcel.styles import Border
     border = Border()
     ws = DummyWorksheet
     ws.parent._borders.add(border)
@@ -390,7 +390,7 @@ def test_number_format(DummyWorksheet, Cell):
 
 
 def test_alignment(DummyWorksheet, Cell):
-    from openpyxl.styles import Alignment
+    from openpyexcel.styles import Alignment
     align = Alignment(wrapText=True)
     ws = DummyWorksheet
     ws.parent._alignments.add(align)
@@ -400,7 +400,7 @@ def test_alignment(DummyWorksheet, Cell):
 
 
 def test_protection(DummyWorksheet, Cell):
-    from openpyxl.styles import Protection
+    from openpyexcel.styles import Protection
     prot = Protection(locked=False)
     ws = DummyWorksheet
     ws.parent._protections.add(prot)

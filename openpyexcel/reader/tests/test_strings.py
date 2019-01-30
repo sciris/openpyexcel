@@ -1,8 +1,8 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
 # package imports
-from openpyxl.reader.strings import read_string_table
+from openpyexcel.reader.strings import read_string_table
 
 
 def test_read_string_table(datadir):

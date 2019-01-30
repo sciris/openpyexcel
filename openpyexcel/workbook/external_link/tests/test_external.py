@@ -1,16 +1,16 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from zipfile import ZipFile
 
 import pytest
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.tests.helper import compare_xml
 
-from openpyxl.xml.constants import (
+from openpyexcel.xml.constants import (
     ARC_WORKBOOK_RELS,
 )
-from openpyxl.packaging.relationship import Relationship
-from openpyxl.xml.functions import tostring, fromstring
+from openpyexcel.packaging.relationship import Relationship
+from openpyexcel.xml.functions import tostring, fromstring
 
 
 @pytest.fixture
@@ -134,7 +134,7 @@ def test_read_ole_link(datadir, ExternalLink):
 
 
 def test_read_external_link(datadir):
-    from openpyxl.packaging.relationship import get_dependents
+    from openpyexcel.packaging.relationship import get_dependents
     from .. external import read_external_link
     datadir.chdir()
     archive = ZipFile("book1.xlsx")
@@ -150,7 +150,7 @@ def test_write_workbook(datadir, tmpdir):
     orig_files = set(src.namelist())
     src.close()
 
-    from openpyxl import load_workbook
+    from openpyexcel import load_workbook
     wb = load_workbook("book1.xlsx")
     tmpdir.chdir()
     wb.save("book1.xlsx")

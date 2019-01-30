@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Bool,
     Integer,
     String,
     Set,
     Sequence
 )
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.serialisable import Serialisable
 
 
 class WebPublishItem(Serialisable):

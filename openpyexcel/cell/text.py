@@ -1,13 +1,13 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """
 Richtext definition
 """
-from openpyxl.compat import unicode
+from openpyexcel.compat import unicode
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Alias,
     Typed,
     Integer,
@@ -17,13 +17,13 @@ from openpyxl.descriptors import (
     String,
     Sequence,
 )
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedBool,
     NestedInteger,
     NestedString,
     NestedText,
 )
-from openpyxl.styles.fonts import Font
+from openpyexcel.styles.fonts import Font
 
 
 class PhoneticProperties(Serialisable):

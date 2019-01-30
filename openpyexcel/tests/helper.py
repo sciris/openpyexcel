@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 # Python stdlib imports
 from lxml.doctestcompare import LXMLOutputChecker, PARSE_XML

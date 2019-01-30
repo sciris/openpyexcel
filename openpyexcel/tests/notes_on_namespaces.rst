@@ -5,7 +5,7 @@ Correct use of namespaces when generating
 Current situation
 -----------------
 
-Most namespace tags are directly generated in openpyxl without explicit or
+Most namespace tags are directly generated in openpyexcel without explicit or
 reliable use of namespaces, eg. `Element("c:valAx")`. These should be
 replaced using qualified tagnames:
 `Element("{http://schemas.openxmlformats.org/drawingml/2006/chart}valAx").

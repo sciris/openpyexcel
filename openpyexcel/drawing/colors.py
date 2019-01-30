@@ -1,28 +1,28 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import basestring, unicode
+from openpyexcel.compat import basestring, unicode
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Alias,
     Typed,
     Integer,
     Set,
     MinMax,
 )
-from openpyxl.descriptors.excel import Percentage
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.excel import Percentage
+from openpyexcel.descriptors.nested import (
     NestedNoneSet,
     NestedValue,
     NestedInteger,
     EmptyTag,
 )
 
-from openpyxl.styles.colors import RGB
-from openpyxl.xml.constants import DRAWING_NS
+from openpyexcel.styles.colors import RGB
+from openpyexcel.xml.constants import DRAWING_NS
 
-from openpyxl.descriptors.excel import ExtensionList as OfficeArtExtensionList
+from openpyexcel.descriptors.excel import ExtensionList as OfficeArtExtensionList
 
 PRESET_COLORS = [
         'aliceBlue', 'antiqueWhite', 'aqua', 'aquamarine',

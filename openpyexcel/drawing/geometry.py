@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Float,
     Integer,
@@ -13,13 +13,13 @@ from openpyxl.descriptors import (
     String,
     Alias,
 )
-from openpyxl.descriptors.excel import Coordinate, Percentage
+from openpyexcel.descriptors.excel import Coordinate, Percentage
 
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     EmptyTag
     )
 
-from openpyxl.descriptors.excel import ExtensionList as OfficeArtExtensionList
+from openpyexcel.descriptors.excel import ExtensionList as OfficeArtExtensionList
 from .colors import ColorChoiceDescriptor
 from .fill import (
     GradientFillProperties,
@@ -28,8 +28,8 @@ from .fill import (
     )
 from .line import LineProperties
 
-from openpyxl.styles.colors import Color
-from openpyxl.xml.constants import DRAWING_NS
+from openpyexcel.styles.colors import Color
+from openpyexcel.xml.constants import DRAWING_NS
 
 
 class Point2D(Serialisable):

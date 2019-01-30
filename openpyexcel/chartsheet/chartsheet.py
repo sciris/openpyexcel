@@ -1,24 +1,24 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from weakref import ref
 
-from openpyxl.descriptors import Typed, Set, Alias
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.drawing.spreadsheet_drawing import (
+from openpyexcel.descriptors import Typed, Set, Alias
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.drawing.spreadsheet_drawing import (
     AbsoluteAnchor,
     SpreadsheetDrawing,
 )
-from openpyxl.worksheet.page import (
+from openpyexcel.worksheet.page import (
     PageMargins,
     PrintPageSetup
 )
-from openpyxl.packaging.relationship import Relationship, RelationshipList
-from openpyxl.worksheet.drawing import Drawing
-from openpyxl.worksheet.header_footer import HeaderFooter
-from openpyxl.workbook.child import _WorkbookChild
-from openpyxl.xml.constants import SHEET_MAIN_NS, REL_NS
+from openpyexcel.packaging.relationship import Relationship, RelationshipList
+from openpyexcel.worksheet.drawing import Drawing
+from openpyexcel.worksheet.header_footer import HeaderFooter
+from openpyexcel.workbook.child import _WorkbookChild
+from openpyexcel.xml.constants import SHEET_MAIN_NS, REL_NS
 
 from .relation import DrawingHF, SheetBackgroundPicture
 from .properties import ChartsheetProperties

@@ -1,6 +1,6 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.styles.colors import Color
+from openpyexcel.styles.colors import Color
 import pytest
 
 

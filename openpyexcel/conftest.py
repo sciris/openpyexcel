@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
@@ -7,14 +7,14 @@ import pytest
 @pytest.fixture
 def Workbook():
     """Workbook Class"""
-    from openpyxl import Workbook
+    from openpyexcel import Workbook
     return Workbook
 
 
 @pytest.fixture
 def Worksheet():
     """Worksheet Class"""
-    from openpyxl.worksheet import Worksheet
+    from openpyexcel.worksheet import Worksheet
     return Worksheet
 
 
@@ -36,11 +36,11 @@ def pytest_runtest_setup(item):
         elif item.get_closest_marker("not_py33"):
             pytest.skip("Ordering is not a given in Python 3")
         elif item.get_closest_marker("defusedxml_required"):
-            from openpyxl import DEFUSEDXML
+            from openpyexcel import DEFUSEDXML
             if not DEFUSEDXML:
                 pytest.skip("defusedxml is required to guard against these vulnerabilities")
         elif item.get_closest_marker("lxml_required"):
-            from openpyxl import LXML
+            from openpyexcel import LXML
             if not LXML:
                 pytest.skip("LXML is required for some features such as schema validation")
         elif item.get_closest_marker("lxml_buffering"):
@@ -48,14 +48,14 @@ def pytest_runtest_setup(item):
             if LIBXML_VERSION < (3, 4, 0, 0):
                 pytest.skip("LXML >= 3.4 is required")
         elif item.get_closest_marker("no_lxml"):
-            from openpyxl import LXML
+            from openpyexcel import LXML
             if LXML:
                 pytest.skip("LXML has a different interface")
         elif item.get_closest_marker("numpy_required"):
-            from openpyxl import NUMPY
+            from openpyexcel import NUMPY
             if not NUMPY:
                 pytest.skip("Numpy must be installed")
         elif item.get_closest_marker("pandas_required"):
-            from openpyxl import PANDAS
+            from openpyexcel import PANDAS
             if not PANDAS:
                 pytest.skip("Pandas must be installed")

@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.xml.constants import DRAWING_NS
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.xml.constants import DRAWING_NS
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Bool,
     Integer,
@@ -12,7 +12,7 @@ from openpyxl.descriptors import (
     Alias,
     NoneSet,
 )
-from openpyxl.descriptors.excel import ExtensionList as OfficeArtExtensionList
+from openpyexcel.descriptors.excel import ExtensionList as OfficeArtExtensionList
 
 from .geometry import GroupTransform2D, Scene3D
 from .text import Hyperlink

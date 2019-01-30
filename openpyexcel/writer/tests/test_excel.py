@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from io import BytesIO
 from string import ascii_letters
@@ -6,11 +6,11 @@ from zipfile import ZipFile
 
 import pytest
 
-from openpyxl.chart import BarChart
-from openpyxl.drawing.spreadsheet_drawing import SpreadsheetDrawing
-from openpyxl import Workbook
-from openpyxl.worksheet.table import Table
-from openpyxl.utils.exceptions import InvalidFileException
+from openpyexcel.chart import BarChart
+from openpyexcel.drawing.spreadsheet_drawing import SpreadsheetDrawing
+from openpyexcel import Workbook
+from openpyexcel.worksheet.table import Table
+from openpyexcel.utils.exceptions import InvalidFileException
 
 
 @pytest.fixture
@@ -84,7 +84,7 @@ def test_write_chart(ExcelWriter, archive):
 
 @pytest.mark.pil_required
 def test_write_images(datadir, ExcelWriter, archive):
-    from openpyxl.drawing.image import Image
+    from openpyexcel.drawing.image import Image
     datadir.chdir()
 
     writer = ExcelWriter(None, archive)
@@ -111,7 +111,7 @@ def test_chartsheet(ExcelWriter, archive):
 
 
 def test_comment(ExcelWriter, archive):
-    from openpyxl.comments import Comment
+    from openpyexcel.comments import Comment
     wb = Workbook()
     ws = wb.active
     ws['B5'].comment = Comment("A comment", "The Author")
@@ -125,7 +125,7 @@ def test_comment(ExcelWriter, archive):
 
 
 def test_merge_vba(ExcelWriter, archive, datadir):
-    from openpyxl import load_workbook
+    from openpyexcel import load_workbook
     datadir.chdir()
     wb = load_workbook("vba+comments.xlsm", keep_vba=True)
 
@@ -149,7 +149,7 @@ def test_merge_vba(ExcelWriter, archive, datadir):
 
 
 def test_duplicate_chart(ExcelWriter, archive, Workbook):
-    from openpyxl.chart import PieChart
+    from openpyexcel.chart import PieChart
     pc = PieChart()
     wb = Workbook()
     writer = ExcelWriter(wb, archive)
@@ -162,7 +162,7 @@ def test_duplicate_chart(ExcelWriter, archive, Workbook):
 def test_save():
     from tempfile import NamedTemporaryFile
     filename = NamedTemporaryFile(delete=False)
-    from openpyxl.workbook import Workbook
+    from openpyexcel.workbook import Workbook
     from ..excel import save_dump
     wb = Workbook(write_only=True)
     save_dump(wb, filename)

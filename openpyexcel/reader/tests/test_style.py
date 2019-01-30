@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.reader.excel import load_workbook
-from openpyxl.styles import (
+from openpyexcel.reader.excel import load_workbook
+from openpyexcel.styles import (
     Color,
     Font,
     PatternFill,

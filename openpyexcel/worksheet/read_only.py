@@ -1,27 +1,27 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """ Read worksheets on-demand
 """
 from zipfile import ZipExtFile
 # compatibility
-from openpyxl.compat import (
+from openpyexcel.compat import (
     range,
     deprecated
 )
 
 # package
-from openpyxl.cell.text import Text
-from openpyxl.xml.functions import iterparse, safe_iterator
-from openpyxl.xml.constants import SHEET_MAIN_NS
+from openpyexcel.cell.text import Text
+from openpyexcel.xml.functions import iterparse, safe_iterator
+from openpyexcel.xml.constants import SHEET_MAIN_NS
 
-from openpyxl.worksheet import Worksheet
-from openpyxl.utils import (
+from openpyexcel.worksheet import Worksheet
+from openpyexcel.utils import (
     get_column_letter,
     coordinate_to_tuple,
 )
-from openpyxl.worksheet.dimensions import SheetDimension
-from openpyxl.cell.read_only import ReadOnlyCell, EMPTY_CELL
+from openpyexcel.worksheet.dimensions import SheetDimension
+from openpyexcel.cell.read_only import ReadOnlyCell, EMPTY_CELL
 
 
 def read_dimension(source):

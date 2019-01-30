@@ -1,11 +1,11 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.cell.text import Text
-from openpyxl.utils.indexed_list import IndexedList
+from openpyexcel.cell.text import Text
+from openpyexcel.utils.indexed_list import IndexedList
 
-from openpyxl.xml.functions import iterparse
-from openpyxl.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import iterparse
+from openpyexcel.xml.constants import SHEET_MAIN_NS
 
 from .worksheet import _get_xml_iter
 

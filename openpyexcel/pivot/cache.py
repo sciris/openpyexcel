@@ -1,7 +1,7 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Bool,
     Float,
@@ -13,20 +13,20 @@ from openpyxl.descriptors import (
     Sequence,
 )
 
-from openpyxl.descriptors.excel import (
+from openpyexcel.descriptors.excel import (
     HexBinary,
     ExtensionList,
     Relation,
 )
-from openpyxl.descriptors.nested import NestedInteger
-from openpyxl.descriptors.sequence import (
+from openpyexcel.descriptors.nested import NestedInteger
+from openpyexcel.descriptors.sequence import (
     NestedSequence,
     MultiSequence,
     MultiSequencePart,
 )
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.xml.functions import tostring
-from openpyxl.packaging.relationship import (
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import tostring
+from openpyexcel.packaging.relationship import (
     RelationshipList,
     Relationship,
     get_rels_path

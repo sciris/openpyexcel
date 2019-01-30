@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring, Element
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring, Element
+from openpyexcel.tests.helper import compare_xml
 from ..serialisable import Serialisable
 from ..base import Integer
 
@@ -197,7 +197,7 @@ def NestedSequence():
     return NestedSequence
 
 
-from openpyxl.styles import Font
+from openpyexcel.styles import Font
 
 @pytest.fixture
 def ComplexObject(NestedSequence):

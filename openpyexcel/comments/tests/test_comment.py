@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from copy import copy
 
-from openpyxl.comments import Comment
+from openpyexcel.comments import Comment
 
 import pytest
 

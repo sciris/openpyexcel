@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import safe_string
-from openpyxl.descriptors import (
+from openpyexcel.compat import safe_string
+from openpyexcel.descriptors import (
     NoneSet,
     Typed,
     Bool,
@@ -10,7 +10,7 @@ from openpyxl.descriptors import (
     Sequence,
     Integer,
 )
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.serialisable import Serialisable
 
 from .colors import ColorDescriptor
 

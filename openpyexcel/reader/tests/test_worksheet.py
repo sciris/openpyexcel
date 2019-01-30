@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
@@ -9,14 +9,14 @@ from zipfile import ZipFile
 
 from lxml.etree import iterparse, fromstring
 
-from openpyxl import load_workbook
-from openpyxl.compat import unicode
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.utils.indexed_list import IndexedList
-from openpyxl.worksheet import Worksheet
-from openpyxl.worksheet.pagebreak import Break, PageBreak
-from openpyxl.packaging.relationship import Relationship, RelationshipList
-from openpyxl.utils.datetime  import CALENDAR_WINDOWS_1900, CALENDAR_MAC_1904
+from openpyexcel import load_workbook
+from openpyexcel.compat import unicode
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.utils.indexed_list import IndexedList
+from openpyexcel.worksheet import Worksheet
+from openpyexcel.worksheet.pagebreak import Break, PageBreak
+from openpyexcel.packaging.relationship import Relationship, RelationshipList
+from openpyexcel.utils.datetime  import CALENDAR_WINDOWS_1900, CALENDAR_MAC_1904
 
 
 def test_get_xml_iter():
@@ -24,7 +24,7 @@ def test_get_xml_iter():
     #2 stream (file-like)
     #3 string
     #4 zipfile
-    from openpyxl.reader.worksheet import _get_xml_iter
+    from openpyexcel.reader.worksheet import _get_xml_iter
     from tempfile import TemporaryFile
 
     FUT = _get_xml_iter
@@ -36,7 +36,7 @@ def test_get_xml_iter():
     stream = FUT(u)
     assert isinstance(stream, BytesIO), type(stream)
 
-    f = TemporaryFile(mode='rb+', prefix='openpyxl.', suffix='.unpack.temp')
+    f = TemporaryFile(mode='rb+', prefix='openpyexcel.', suffix='.unpack.temp')
     stream = FUT(f)
     assert stream == f
     f.close()
@@ -56,8 +56,8 @@ def test_get_xml_iter():
 
 @pytest.fixture
 def Workbook():
-    from openpyxl.styles.styleable import StyleArray
-    from openpyxl.styles import numbers
+    from openpyexcel.styles.styleable import StyleArray
+    from openpyexcel.styles import numbers
 
     class DummyStyle:
         number_format = numbers.FORMAT_GENERAL
@@ -318,8 +318,8 @@ def test_datetime(WorkSheetParser):
 
 
 def test_mac_date():
-    from openpyxl.styles.styleable import StyleArray
-    from openpyxl.styles import numbers
+    from openpyexcel.styles.styleable import StyleArray
+    from openpyexcel.styles import numbers
 
     class DummyWorkbook:
         guess_types = False
@@ -509,7 +509,7 @@ def test_legacy_document_no_keep(WorkSheetParser, datadir):
 
 @pytest.fixture
 def Translator():
-    from openpyxl.formula import translate
+    from openpyexcel.formula import translate
     return translate.Translator
 
 def test_shared_formula(WorkSheetParser, Translator):
@@ -602,7 +602,7 @@ def test_external_hyperlinks(WorkSheetParser):
        display="http://test.com" r:id="rId1" ref="A1"/>
     </sheet>
     """
-    from openpyxl.packaging.relationship import Relationship, RelationshipList
+    from openpyexcel.packaging.relationship import Relationship, RelationshipList
 
     r = Relationship(type="hyperlink", Id="rId1", Target="../")
     rels = RelationshipList()
@@ -662,7 +662,7 @@ def test_conditonal_formatting(WorkSheetParser):
     </conditionalFormatting>
     </sheet>
     """
-    from openpyxl.styles.differential import DifferentialStyle
+    from openpyexcel.styles.differential import DifferentialStyle
 
     parser = WorkSheetParser
     dxf = DifferentialStyle()

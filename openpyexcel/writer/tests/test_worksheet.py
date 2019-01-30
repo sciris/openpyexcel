@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import datetime
 import decimal
@@ -7,22 +7,22 @@ from io import BytesIO
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring, xmlfile
-from openpyxl.reader.excel import load_workbook
-from openpyxl import Workbook
+from openpyexcel.xml.functions import fromstring, tostring, xmlfile
+from openpyexcel.reader.excel import load_workbook
+from openpyexcel import Workbook
 
 from .. worksheet import write_worksheet
 
-from openpyxl.tests.helper import compare_xml
-from openpyxl.worksheet.dimensions import DimensionHolder
-from openpyxl.xml.constants import SHEET_MAIN_NS, REL_NS
-from openpyxl.utils.datetime import CALENDAR_MAC_1904, CALENDAR_WINDOWS_1900
+from openpyexcel.tests.helper import compare_xml
+from openpyexcel.worksheet.dimensions import DimensionHolder
+from openpyexcel.xml.constants import SHEET_MAIN_NS, REL_NS
+from openpyexcel.utils.datetime import CALENDAR_MAC_1904, CALENDAR_WINDOWS_1900
 
-from openpyxl import LXML
+from openpyexcel import LXML
 
 @pytest.fixture
 def worksheet():
-    from openpyxl import Workbook
+    from openpyexcel import Workbook
     wb = Workbook()
     return wb.active
 
@@ -42,7 +42,7 @@ def DummyWorksheet():
 
 @pytest.fixture
 def ColumnDimension():
-    from openpyxl.worksheet.dimensions import ColumnDimension
+    from openpyexcel.worksheet.dimensions import ColumnDimension
     return ColumnDimension
 
 
@@ -155,7 +155,7 @@ def test_write_epoch(worksheet, write_cell_implementation, value, expected, epoc
 def test_write_comment(worksheet, write_cell_implementation):
 
     write_cell = write_cell_implementation
-    from openpyxl.comments import Comment
+    from openpyexcel.comments import Comment
 
     ws = worksheet
     cell = ws['A1']
@@ -217,7 +217,7 @@ def test_write_formula(worksheet, write_rows):
 
 
 def test_write_height(worksheet, write_rows):
-    from openpyxl.worksheet.dimensions import RowDimension
+    from openpyexcel.worksheet.dimensions import RowDimension
     ws = worksheet
     ws['F1'] = 10
 
@@ -308,7 +308,7 @@ def test_external_hyperlink(worksheet):
 
 def test_internal_hyperlink(worksheet):
     from .. worksheet import write_hyperlinks
-    from openpyxl.worksheet.hyperlink import Hyperlink
+    from openpyexcel.worksheet.hyperlink import Hyperlink
 
     ws = worksheet
     cell = ws['A1']
@@ -343,7 +343,7 @@ def test_write_hyperlink_image_rels(Workbook, Image, datadir):
 
 @pytest.fixture
 def worksheet_with_cf(worksheet):
-    from openpyxl.formatting.formatting import ConditionalFormattingList
+    from openpyexcel.formatting.formatting import ConditionalFormattingList
     worksheet.conditional_formating = ConditionalFormattingList()
     return worksheet
 
@@ -356,7 +356,7 @@ def write_conditional_formatting():
 
 def test_conditional_formatting_customRule(worksheet_with_cf, write_conditional_formatting):
     ws = worksheet_with_cf
-    from openpyxl.formatting.rule import Rule
+    from openpyexcel.formatting.rule import Rule
 
     ws.conditional_formatting.add('C1:C10',
                                   Rule(type='expression',formula=['ISBLANK(C1)'], stopIfTrue='1')
@@ -380,8 +380,8 @@ def test_conditional_font(worksheet_with_cf, write_conditional_formatting):
     """Test to verify font style written correctly."""
 
     # Create cf rule
-    from openpyxl.styles import PatternFill, Font, Color
-    from openpyxl.formatting.rule import CellIsRule
+    from openpyexcel.styles import PatternFill, Font, Color
+    from openpyexcel.formatting.rule import CellIsRule
 
     redFill = PatternFill(start_color=Color('FFEE1111'),
                    end_color=Color('FFEE1111'),
@@ -411,7 +411,7 @@ def test_conditional_font(worksheet_with_cf, write_conditional_formatting):
 
 
 def test_formula_rule(worksheet_with_cf, write_conditional_formatting):
-    from openpyxl.formatting.rule import FormulaRule
+    from openpyexcel.formatting.rule import FormulaRule
 
     ws = worksheet_with_cf
     ws.conditional_formatting.add('C1:C10',
@@ -541,7 +541,7 @@ def test_write_drawing(worksheet):
 
 
 def test_write_tables(worksheet, write_worksheet):
-    from openpyxl.worksheet.table import Table
+    from openpyexcel.worksheet.table import Table
 
     worksheet.append(list(u"ABCDEF\xfc"))
     worksheet._tables = [Table(displayName="Table1", ref="A1:G6")]
@@ -598,7 +598,7 @@ def test_write_tables(worksheet, write_worksheet):
 
 
 def test_table_rels(worksheet):
-    from openpyxl.worksheet.table import Table
+    from openpyexcel.worksheet.table import Table
     from ..worksheet import _add_table_headers
 
     worksheet.append(list(u"ABCDEF\xfc"))

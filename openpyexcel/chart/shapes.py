@@ -1,18 +1,18 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Alias
 )
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     EmptyTag
 )
-from openpyxl.drawing.colors import ColorChoiceDescriptor
-from openpyxl.drawing.fill import *
-from openpyxl.drawing.line import LineProperties
-from openpyxl.drawing.geometry import (
+from openpyexcel.drawing.colors import ColorChoiceDescriptor
+from openpyexcel.drawing.fill import *
+from openpyexcel.drawing.line import LineProperties
+from openpyexcel.drawing.geometry import (
     Shape3D,
     Scene3D,
     Transform2D,

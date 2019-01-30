@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.styles import numbers
+from openpyexcel.styles import numbers
 from ..numbers import (
     FORMAT_DATE_DATETIME,
     FORMAT_DATE_DDMMYY,
@@ -37,7 +37,7 @@ def test_builtin_format():
 
 
 def test_number_descriptor():
-    from openpyxl.descriptors import Strict
+    from openpyexcel.descriptors import Strict
     from ..numbers import NumberFormatDescriptor
 
     class Dummy(Strict):

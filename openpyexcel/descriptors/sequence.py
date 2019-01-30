@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import safe_string
-from openpyxl.xml.functions import Element
-from openpyxl.utils.indexed_list import IndexedList
+from openpyexcel.compat import safe_string
+from openpyexcel.xml.functions import Element
+from openpyexcel.utils.indexed_list import IndexedList
 
 from .base import Descriptor, Alias, _convert
 from .namespace import namespaced

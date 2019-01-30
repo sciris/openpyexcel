@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 ## Incomplete!
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Float,
     Integer,
@@ -11,14 +11,14 @@ from openpyxl.descriptors import (
     String,
     Bool,
 )
-from openpyxl.descriptors.excel import Guid, ExtensionList
-from openpyxl.descriptors.sequence import NestedSequence
+from openpyexcel.descriptors.excel import Guid, ExtensionList
+from openpyexcel.descriptors.sequence import NestedSequence
 
-from openpyxl.utils.indexed_list import IndexedList
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.xml.functions import tostring
+from openpyexcel.utils.indexed_list import IndexedList
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import tostring
 
-from openpyxl.cell.text import Text
+from openpyexcel.cell.text import Text
 from .author import AuthorList
 from .comments import Comment
 from .shape_writer import ShapeWriter

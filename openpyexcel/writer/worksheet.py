@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Write worksheets to xml representations."""
 
@@ -8,22 +8,22 @@ from io import BytesIO
 from warnings import warn
 
 # package imports
-from openpyxl.xml.functions import xmlfile
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.compat import unicode
+from openpyexcel.xml.functions import xmlfile
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.compat import unicode
 
-from openpyxl.styles.differential import DifferentialStyle
-from openpyxl.packaging.relationship import Relationship, RelationshipList
-from openpyxl.worksheet.merge import MergeCells, MergeCell
-from openpyxl.worksheet.properties import WorksheetProperties
-from openpyxl.worksheet.hyperlink import (
+from openpyexcel.styles.differential import DifferentialStyle
+from openpyexcel.packaging.relationship import Relationship, RelationshipList
+from openpyexcel.worksheet.merge import MergeCells, MergeCell
+from openpyexcel.worksheet.properties import WorksheetProperties
+from openpyexcel.worksheet.hyperlink import (
     Hyperlink,
     HyperlinkList,
 )
-from openpyxl.worksheet.related import Related
-from openpyxl.worksheet.table import TablePartList
-from openpyxl.worksheet.header_footer import HeaderFooter
-from openpyxl.worksheet.dimensions import (
+from openpyexcel.worksheet.related import Related
+from openpyexcel.worksheet.table import TablePartList
+from openpyexcel.worksheet.header_footer import HeaderFooter
+from openpyexcel.worksheet.dimensions import (
     SheetFormatProperties,
     SheetDimension,
 )

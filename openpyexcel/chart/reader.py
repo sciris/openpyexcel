@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """
 Read a chart
 """
 
 from .chartspace import ChartSpace, PlotArea
-from openpyxl.xml.functions import fromstring
+from openpyexcel.xml.functions import fromstring
 
 _types = ('areaChart', 'area3DChart', 'lineChart', 'line3DChart',
          'stockChart', 'radarChart', 'scatterChart', 'pieChart', 'pie3DChart',

@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Float,
     NoneSet,
@@ -15,12 +15,12 @@ from openpyxl.descriptors import (
     Alias,
 )
 
-from openpyxl.descriptors.excel import (
+from openpyexcel.descriptors.excel import (
     ExtensionList,
     Percentage,
     _explicit_none,
 )
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedValue,
     NestedSet,
     NestedBool,
@@ -29,7 +29,7 @@ from openpyxl.descriptors.nested import (
     NestedInteger,
     NestedMinMax,
 )
-from openpyxl.xml.constants import CHART_NS
+from openpyexcel.xml.constants import CHART_NS
 
 from .descriptors import NumberFormatDescriptor
 from .layout import Layout

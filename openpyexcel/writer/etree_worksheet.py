@@ -1,13 +1,13 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from operator import itemgetter
 
-from openpyxl.compat import safe_string
-from openpyxl.comments.comment_sheet import CommentRecord
-from openpyxl.xml.functions import Element, SubElement
-from openpyxl import LXML
-from openpyxl.utils.datetime import to_excel, days_to_time
+from openpyexcel.compat import safe_string
+from openpyexcel.comments.comment_sheet import CommentRecord
+from openpyexcel.xml.functions import Element, SubElement
+from openpyexcel import LXML
+from openpyexcel.utils.datetime import to_excel, days_to_time
 from datetime import timedelta
 
 

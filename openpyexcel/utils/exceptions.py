@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
-"""Definitions for openpyxl shared exception classes."""
+"""Definitions for openpyexcel shared exception classes."""
 
 
 class CellCoordinatesException(Exception):

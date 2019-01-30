@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 
 @pytest.fixture
 def StockChart():
@@ -15,7 +15,7 @@ def StockChart():
 class TestStockChart:
 
     def test_ctor(self, StockChart):
-        from openpyxl.chart.series import Series
+        from openpyexcel.chart.series import Series
 
         chart = StockChart(ser=[Series(), Series(), Series()])
         xml = tostring(chart.to_tree())

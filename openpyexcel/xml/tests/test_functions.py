@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
@@ -14,7 +14,7 @@ def test_safe_iterator_none():
 
 @pytest.mark.parametrize("xml, tag",
                          [
-                             ("<root xmlns='http://openpyxl.org/ns' />", "root"),
+                             ("<root xmlns='http://openpyexcel.org/ns' />", "root"),
                              ("<root />", "root"),
                          ]
                          )

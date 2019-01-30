@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import unicode
+from openpyexcel.compat import unicode
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     String,
     Bool,
@@ -12,17 +12,17 @@ from openpyxl.descriptors import (
     NoneSet,
     Sequence,
 )
-from openpyxl.descriptors.excel import Relation, ExtensionList
-from openpyxl.descriptors.nested import NestedText
-from openpyxl.descriptors.sequence import NestedSequence, ValueSequence
+from openpyexcel.descriptors.excel import Relation, ExtensionList
+from openpyexcel.descriptors.nested import NestedText
+from openpyexcel.descriptors.sequence import NestedSequence, ValueSequence
 
-from openpyxl.packaging.relationship import (
+from openpyexcel.packaging.relationship import (
     Relationship,
     get_rels_path,
     get_dependents
     )
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.xml.functions import fromstring
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import fromstring
 
 
 """Manage links to external Workbooks"""

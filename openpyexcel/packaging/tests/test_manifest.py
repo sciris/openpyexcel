@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 from io import BytesIO
 from zipfile import ZipFile
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 
 from ..manifest import WORKSHEET_TYPE
 
@@ -188,7 +188,7 @@ class TestManifest:
 
 
     def test_append(self, Manifest):
-        from openpyxl import Workbook
+        from openpyexcel import Workbook
         wb = Workbook()
         ws = wb.active
         manifest = Manifest()
@@ -198,7 +198,7 @@ class TestManifest:
 
     def test_write(self, Manifest):
         mf = Manifest()
-        from openpyxl import Workbook
+        from openpyexcel import Workbook
         wb = Workbook()
 
         archive = ZipFile(BytesIO(), "w")
@@ -215,7 +215,7 @@ class TestManifest:
                              ]
                              )
     def test_media(self, Manifest, file, registration):
-        from openpyxl import Workbook
+        from openpyexcel import Workbook
         wb = Workbook()
 
         manifest = Manifest()
@@ -227,7 +227,7 @@ class TestManifest:
 
     def test_vba(self, datadir, Manifest):
         datadir.chdir()
-        from openpyxl import load_workbook
+        from openpyexcel import load_workbook
         wb = load_workbook('sample.xlsm', keep_vba=True)
 
         manifest = Manifest()

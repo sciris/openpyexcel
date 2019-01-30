@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
@@ -12,10 +12,10 @@ from ..alignment import Alignment
 from ..protection import Protection
 from ..cell_style import CellStyle, StyleArray
 
-from openpyxl import Workbook
+from openpyexcel import Workbook
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 
 
 @pytest.fixture

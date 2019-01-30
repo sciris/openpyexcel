@@ -1,13 +1,13 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """
 Excel specific descriptors
 """
 
-from openpyxl.xml.constants import REL_NS
-from openpyxl.compat import safe_string, unicode
-from openpyxl.xml.functions import Element
+from openpyexcel.xml.constants import REL_NS
+from openpyexcel.compat import safe_string, unicode
+from openpyexcel.xml.functions import Element
 
 from . import (
     MatchPattern,
@@ -18,7 +18,7 @@ from . import (
     Sequence,
 )
 from .serialisable import Serialisable
-from openpyxl.utils.cell import RANGE_EXPR
+from openpyexcel.utils.cell import RANGE_EXPR
 
 class HexBinary(MatchPattern):
 

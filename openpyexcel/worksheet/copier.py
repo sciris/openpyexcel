@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 #standard lib imports
 from copy import copy
 
-#openpyxl imports
-from openpyxl.comments import Comment
-from openpyxl.worksheet import Worksheet
+#openpyexcel imports
+from openpyexcel.comments import Comment
+from openpyexcel.worksheet import Worksheet
 
 
 class WorksheetCopy(object):

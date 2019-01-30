@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import unicode
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.compat import unicode
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Alias,
     Bool,
     Integer,
@@ -13,13 +13,13 @@ from openpyxl.descriptors import (
     MinMax,
     Sequence,
 )
-from openpyxl.descriptors.excel import (
+from openpyexcel.descriptors.excel import (
     Relation,
     Percentage,
 )
-from openpyxl.descriptors.nested import NestedNoneSet, NestedValue
-from openpyxl.descriptors.sequence import NestedSequence
-from openpyxl.xml.constants import DRAWING_NS
+from openpyexcel.descriptors.nested import NestedNoneSet, NestedValue
+from openpyexcel.descriptors.sequence import NestedSequence
+from openpyexcel.xml.constants import DRAWING_NS
 
 from .colors import (
     ColorChoice,
@@ -31,7 +31,7 @@ from .colors import (
 )
 
 
-from openpyxl.descriptors.excel import ExtensionList as OfficeArtExtensionList
+from openpyexcel.descriptors.excel import ExtensionList as OfficeArtExtensionList
 from .effect import *
 
 """

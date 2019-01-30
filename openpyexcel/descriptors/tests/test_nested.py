@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.xml.functions import tostring, fromstring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import tostring, fromstring
+from openpyexcel.tests.helper import compare_xml
 from ..serialisable import Serialisable
 
 

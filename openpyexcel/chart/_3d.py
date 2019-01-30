@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import Typed, Alias
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors import Typed, Alias
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.nested import (
     NestedBool,
     NestedInteger,
     NestedMinMax,
 )
-from openpyxl.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.excel import ExtensionList
 from .marker import PictureOptions
 from .shapes import GraphicalProperties
 

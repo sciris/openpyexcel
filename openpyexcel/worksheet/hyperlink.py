@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     String,
     Sequence,
 )
-from openpyxl.descriptors.excel import Relation
+from openpyexcel.descriptors.excel import Relation
 
 
 class Hyperlink(Serialisable):

@@ -1,18 +1,18 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from itertools import chain
 
-from openpyxl.compat import unicode
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.compat import unicode
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     MinMax,
     Typed,
     String,
     Strict,
 )
-from openpyxl.worksheet import Worksheet
-from openpyxl.utils import (
+from openpyexcel.worksheet import Worksheet
+from openpyexcel.utils import (
     get_column_letter,
     range_to_tuple,
     quote_sheetname

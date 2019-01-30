@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """
 XML compatability functions
@@ -11,7 +11,7 @@ from functools import partial
 # compatibility
 
 # package imports
-from openpyxl import DEFUSEDXML, LXML
+from openpyexcel import DEFUSEDXML, LXML
 
 if LXML is True:
     from lxml.etree import (
@@ -86,7 +86,7 @@ else:
     from et_xmlfile import xmlfile
 
 
-from openpyxl.xml.constants import (
+from openpyexcel.xml.constants import (
     CHART_NS,
     DRAWING_NS,
     SHEET_DRAWING_NS,

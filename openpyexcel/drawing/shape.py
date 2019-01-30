@@ -1,24 +1,24 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.styles.colors import Color, BLACK, WHITE
+from openpyexcel.styles.colors import Color, BLACK, WHITE
 
-from openpyxl.utils.units import (
+from openpyexcel.utils.units import (
     pixels_to_EMU,
     EMU_to_pixels,
     short_color,
 )
 
-from openpyxl.compat import deprecated
-from openpyxl.xml.functions import Element, SubElement, tostring
-from openpyxl.xml.constants import (
+from openpyexcel.compat import deprecated
+from openpyexcel.xml.functions import Element, SubElement, tostring
+from openpyexcel.xml.constants import (
     DRAWING_NS,
     SHEET_DRAWING_NS,
     CHART_NS,
     CHART_DRAWING_NS,
     PKG_REL_NS
 )
-from openpyxl.compat.strings import safe_string
+from openpyexcel.compat.strings import safe_string
 
 
 class Shape(object):

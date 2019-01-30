@@ -11,7 +11,7 @@ to identify the parts of the formula that need to change.
 
 import re
 from .tokenizer import Tokenizer, Token
-from openpyxl.utils import (
+from openpyexcel.utils import (
     coordinate_to_tuple,
     column_index_from_string,
     get_column_letter

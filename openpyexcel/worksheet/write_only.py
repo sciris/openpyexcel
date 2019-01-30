@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
 """Write worksheets to xml representations in an optimized way"""
@@ -9,24 +9,24 @@ from inspect import isgenerator
 import os
 from tempfile import NamedTemporaryFile
 
-from openpyxl.cell import Cell, WriteOnlyCell
-from openpyxl.drawing.spreadsheet_drawing import SpreadsheetDrawing
-from openpyxl.workbook.child import _WorkbookChild
+from openpyexcel.cell import Cell, WriteOnlyCell
+from openpyexcel.drawing.spreadsheet_drawing import SpreadsheetDrawing
+from openpyexcel.workbook.child import _WorkbookChild
 from .worksheet import Worksheet
 from .related import Related
 
-from openpyxl.utils.exceptions import WorkbookAlreadySaved
+from openpyexcel.utils.exceptions import WorkbookAlreadySaved
 
-from openpyxl.writer.etree_worksheet import write_cell
-from openpyxl.writer.worksheet import write_drawing, write_conditional_formatting
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.xml.functions import xmlfile
+from openpyexcel.writer.etree_worksheet import write_cell
+from openpyexcel.writer.worksheet import write_drawing, write_conditional_formatting
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import xmlfile
 
 ALL_TEMP_FILES = []
 
 
 @atexit.register
-def _openpyxl_shutdown():
+def _openpyexcel_shutdown():
     ALL_TEMP_FILES
     for path in ALL_TEMP_FILES:
         if os.path.exists(path):
@@ -35,7 +35,7 @@ def _openpyxl_shutdown():
 
 def create_temporary_file(suffix=''):
     fobj = NamedTemporaryFile(mode='w+', suffix=suffix,
-                              prefix='openpyxl.', delete=False)
+                              prefix='openpyexcel.', delete=False)
     filename = fobj.name
     fobj.close()
     ALL_TEMP_FILES.append(filename)

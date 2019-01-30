@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.xml.functions import (
+from openpyexcel.xml.functions import (
     Element,
     SubElement,
     tostring,
     fromstring,
 )
 
-from openpyxl.utils import (
+from openpyexcel.utils import (
     column_index_from_string,
     coordinate_from_string,
 )

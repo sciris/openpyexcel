@@ -1,22 +1,22 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from collections import OrderedDict
 
-from openpyxl.compat import basestring
-from openpyxl.descriptors import (
+from openpyexcel.compat import basestring
+from openpyexcel.descriptors import (
     Bool,
     String,
     Sequence,
     Alias,
     Convertible,
 )
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.serialisable import Serialisable
 
 from .rule import Rule
 
-from openpyxl.worksheet.cell_range import MultiCellRange
+from openpyexcel.worksheet.cell_range import MultiCellRange
 
 class ConditionalFormatting(Serialisable):
 
@@ -74,7 +74,7 @@ class ConditionalFormattingList(object):
         if isinstance(range_string, basestring):
             cf = ConditionalFormatting(range_string)
         if not isinstance(cfRule, Rule):
-            raise ValueError("Only instances of openpyxl.formatting.rule.Rule may be added")
+            raise ValueError("Only instances of openpyexcel.formatting.rule.Rule may be added")
         rule = cfRule
         self.max_priority += 1
         if not rule.priority:

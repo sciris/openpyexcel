@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """
 Generic serialisable classes
@@ -17,8 +17,8 @@ from .base import (
     Text,
     )
 from .sequence import Sequence
-from openpyxl.compat import safe_string
-from openpyxl.xml.functions import Element, localname
+from openpyexcel.compat import safe_string
+from openpyexcel.xml.functions import Element, localname
 
 
 class Nested(Descriptor):

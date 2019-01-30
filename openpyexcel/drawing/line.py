@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Float,
     Integer,
@@ -14,21 +14,21 @@ from openpyxl.descriptors import (
     Alias,
     Sequence
 )
-from openpyxl.descriptors.excel import Coordinate, Percentage
+from openpyexcel.descriptors.excel import Coordinate, Percentage
 
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedInteger,
     NestedSet,
     NestedNoneSet,
     EmptyTag,
 )
-from openpyxl.compat import safe_string
-from openpyxl.xml.constants import DRAWING_NS
-from openpyxl.xml.functions import Element
+from openpyexcel.compat import safe_string
+from openpyexcel.xml.constants import DRAWING_NS
+from openpyexcel.xml.functions import Element
 
 from .colors import ColorChoiceDescriptor
 from .fill import GradientFillProperties, PatternFillProperties
-from openpyxl.descriptors.excel import ExtensionList as OfficeArtExtensionList
+from openpyexcel.descriptors.excel import ExtensionList as OfficeArtExtensionList
 
 """
 Line elements from drawing main schema

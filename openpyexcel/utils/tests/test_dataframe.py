@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 from math import isnan
@@ -11,7 +11,7 @@ def sample_data():
     from pandas.util import testing
 
     df = testing.makeMixedDataFrame()
-    df.index.name = "openpyxl test"
+    df.index.name = "openpyexcel test"
     df.iloc[0] = numpy.nan
     return df
 
@@ -39,7 +39,7 @@ def test_dataframe_index(sample_data):
     from ..dataframe import dataframe_to_rows
 
     rows = tuple(dataframe_to_rows(sample_data, header=False))
-    assert rows[0] == ['openpyxl test']
+    assert rows[0] == ['openpyexcel test']
 
 
 def test_expand_levels():

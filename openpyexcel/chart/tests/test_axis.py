@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import tostring, fromstring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import tostring, fromstring
+from openpyexcel.tests.helper import compare_xml
 
 
 @pytest.fixture
@@ -211,7 +211,7 @@ class TestDateAx:
 
 
     def test_from_xml(self, DateAxis):
-        from openpyxl.chart.data_source import NumFmt
+        from openpyexcel.chart.data_source import NumFmt
 
         src = """
         <dateAx>

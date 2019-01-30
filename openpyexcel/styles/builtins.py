@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 # Builtins styles as defined in Part 4 Annex G.2
 
 from .named_styles import NamedStyle
-from openpyxl.xml.functions import fromstring
+from openpyexcel.xml.functions import fromstring
 
 
 normal = """

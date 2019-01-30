@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
@@ -20,5 +20,5 @@ def datadir():
 @pytest.fixture
 def FormatRule():
     """Formatting rule class"""
-    from openpyxl.formatting.rules import FormatRule
+    from openpyexcel.formatting.rules import FormatRule
     return FormatRule

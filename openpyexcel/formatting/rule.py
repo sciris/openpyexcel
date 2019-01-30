@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import basestring, unicode
+from openpyexcel.compat import basestring, unicode
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     String,
     Sequence,
@@ -14,11 +14,11 @@ from openpyxl.descriptors import (
     Integer,
     Float,
 )
-from openpyxl.descriptors.excel import HexBinary, ExtensionList
-from openpyxl.styles.colors import Color, ColorDescriptor
-from openpyxl.styles.differential import DifferentialStyle
+from openpyexcel.descriptors.excel import HexBinary, ExtensionList
+from openpyexcel.styles.colors import Color, ColorDescriptor
+from openpyexcel.styles.differential import DifferentialStyle
 
-from openpyxl.utils.cell import COORD_RE
+from openpyexcel.utils.cell import COORD_RE
 
 
 class ValueDescriptor(Float):

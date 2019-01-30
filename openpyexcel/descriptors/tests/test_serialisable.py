@@ -1,9 +1,9 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 
 
 @pytest.fixture
@@ -41,12 +41,12 @@ class TestSerialisable:
 
     def test_str(self, Immutable):
         d = Immutable()
-        assert str(d) == """<openpyxl.descriptors.tests.test_serialisable.Immutable object>
+        assert str(d) == """<openpyexcel.descriptors.tests.test_serialisable.Immutable object>
 Parameters:
 value=None"""
 
         d2 = Immutable("hello")
-        assert str(d2) == """<openpyxl.descriptors.tests.test_serialisable.Immutable object>
+        assert str(d2) == """<openpyexcel.descriptors.tests.test_serialisable.Immutable object>
 Parameters:
 value='hello'"""
 

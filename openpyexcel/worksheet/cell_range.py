@@ -1,14 +1,14 @@
 from __future__ import absolute_import, unicode_literals
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from copy import copy
 
-from openpyxl.compat.strings import safe_repr
-from openpyxl.descriptors import Strict
-from openpyxl.descriptors import MinMax, Sequence
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.compat.strings import safe_repr
+from openpyexcel.descriptors import Strict
+from openpyexcel.descriptors import MinMax, Sequence
+from openpyexcel.descriptors.serialisable import Serialisable
 
-from openpyxl.utils import (
+from openpyexcel.utils import (
     range_boundaries,
     range_to_tuple,
     get_column_letter,
@@ -160,7 +160,7 @@ class CellRange(Serialisable):
         """
         Test whether the ranges are not equal.
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range
         :return: ``True`` if *range* != *other*.
         """
@@ -181,7 +181,7 @@ class CellRange(Serialisable):
         """
         Test whether the ranges are equal.
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range
         :return: ``True`` if *range* == *other*.
         """
@@ -192,7 +192,7 @@ class CellRange(Serialisable):
         """
         Test whether every cell in this range is also in *other*.
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range
         :return: ``True`` if *range* <= *other*.
         """
@@ -211,7 +211,7 @@ class CellRange(Serialisable):
         """
         Test whether *other* contains every cell of this range, and more.
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range
         :return: ``True`` if *range* < *other*.
         """
@@ -222,7 +222,7 @@ class CellRange(Serialisable):
         """
         Test whether every cell in *other* is in this range.
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range
         :return: ``True`` if *range* >= *other* (or *other* in *range*).
         """
@@ -251,7 +251,7 @@ class CellRange(Serialisable):
         """
         Test whether this range contains every cell in *other*, and more.
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range
         :return: ``True`` if *range* > *other*.
         """
@@ -263,7 +263,7 @@ class CellRange(Serialisable):
         Return ``True`` if this range has no cell in common with *other*.
         Ranges are disjoint if and only if their intersection is the empty range.
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range.
         :return: ``True`` if the range has no cells in common with other.
         """
@@ -282,7 +282,7 @@ class CellRange(Serialisable):
         """
         Return a new range with cells common to this range and *other*
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range.
         :return: the intersecting sheet range.
         :raise: :class:`ValueError` if the *other* range doesn't intersect
@@ -308,7 +308,7 @@ class CellRange(Serialisable):
         will contain all cells from this range, *other*, and any additional
         cells required to form a rectangular ``CellRange``.
 
-        :type other: openpyxl.worksheet.cell_range.CellRange
+        :type other: openpyexcel.worksheet.cell_range.CellRange
         :param other: Other sheet range.
         :return: a ``CellRange`` that is a superset of this and *other*.
         """

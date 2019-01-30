@@ -1,17 +1,17 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Bool,
     Integer,
     String,
     Alias,
 )
-from openpyxl.descriptors.excel import ExtensionList as OfficeArtExtensionList
-from openpyxl.chart.shapes import GraphicalProperties
-from openpyxl.chart.text import RichText
+from openpyexcel.descriptors.excel import ExtensionList as OfficeArtExtensionList
+from openpyexcel.chart.shapes import GraphicalProperties
+from openpyexcel.chart.text import RichText
 
 from .properties import (
     NonVisualDrawingProps,

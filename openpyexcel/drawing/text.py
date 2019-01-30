@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import unicode
+from openpyexcel.compat import unicode
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Alias,
     Typed,
     Set,
@@ -15,21 +15,21 @@ from openpyxl.descriptors import (
     MinMax,
     Integer
 )
-from openpyxl.descriptors.excel import (
+from openpyexcel.descriptors.excel import (
     HexBinary,
     TextPoint,
     Coordinate,
     ExtensionList,
     Relation,
 )
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedInteger,
     NestedString,
     NestedText,
     NestedValue,
     EmptyTag
 )
-from openpyxl.xml.constants import DRAWING_NS
+from openpyexcel.xml.constants import DRAWING_NS
 
 
 from .colors import ColorChoiceDescriptor
@@ -41,8 +41,8 @@ from .geometry import (
     Scene3D
 )
 
-from openpyxl.descriptors.excel import ExtensionList as OfficeArtExtensionList
-from openpyxl.descriptors.nested import NestedBool
+from openpyexcel.descriptors.excel import ExtensionList as OfficeArtExtensionList
+from openpyexcel.descriptors.nested import NestedBool
 
 
 class EmbeddedWAVAudioFile(Serialisable):

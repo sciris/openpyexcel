@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import re
-from openpyxl.compat import safe_string, basestring
-from openpyxl.descriptors import (
+from openpyexcel.compat import safe_string, basestring
+from openpyexcel.descriptors import (
     Descriptor,
     String,
     Bool,
@@ -12,8 +12,8 @@ from openpyxl.descriptors import (
     Typed,
     Sequence
 )
-from openpyxl.descriptors.excel import HexBinary, ExtensionList
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.excel import HexBinary, ExtensionList
+from openpyexcel.descriptors.serialisable import Serialisable
 
 # Default Color Index as per 18.8.27 of ECMA Part 4
 COLOR_INDEX = (

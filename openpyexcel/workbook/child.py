@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import re
 import warnings
 
-from openpyxl.compat import unicode, safe_repr
+from openpyexcel.compat import unicode, safe_repr
 
-from openpyxl.worksheet.header_footer import HeaderFooter
+from openpyexcel.worksheet.header_footer import HeaderFooter
 
 """
 Base class for worksheets, chartsheets, etc. that can be added to workbooks

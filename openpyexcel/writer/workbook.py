@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Write the workbook global settings to the archive."""
 
 from copy import copy
 
-from openpyxl.utils import absolute_coordinate, quote_sheetname
-from openpyxl.xml.constants import (
+from openpyexcel.utils import absolute_coordinate, quote_sheetname
+from openpyexcel.xml.constants import (
     ARC_APP,
     ARC_CORE,
     ARC_WORKBOOK,
@@ -14,17 +14,17 @@ from openpyxl.xml.constants import (
     CUSTOMUI_NS,
     ARC_ROOT_RELS,
 )
-from openpyxl.xml.functions import tostring, fromstring
+from openpyexcel.xml.functions import tostring, fromstring
 
-from openpyxl.worksheet import Worksheet
-from openpyxl.chartsheet import Chartsheet
-from openpyxl.packaging.relationship import Relationship, RelationshipList
-from openpyxl.workbook.defined_name import DefinedName
-from openpyxl.workbook.external_reference import ExternalReference
-from openpyxl.workbook.parser import ChildSheet, WorkbookPackage, PivotCache
-from openpyxl.workbook.properties import CalcProperties, WorkbookProperties
-from openpyxl.workbook.views import BookView
-from openpyxl.utils.datetime import CALENDAR_MAC_1904
+from openpyexcel.worksheet import Worksheet
+from openpyexcel.chartsheet import Chartsheet
+from openpyexcel.packaging.relationship import Relationship, RelationshipList
+from openpyexcel.workbook.defined_name import DefinedName
+from openpyexcel.workbook.external_reference import ExternalReference
+from openpyexcel.workbook.parser import ChildSheet, WorkbookPackage, PivotCache
+from openpyexcel.workbook.properties import CalcProperties, WorkbookProperties
+from openpyexcel.workbook.views import BookView
+from openpyexcel.utils.datetime import CALENDAR_MAC_1904
 
 
 def write_root_rels(workbook):

@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from collections import defaultdict
 from itertools import chain
 from operator import itemgetter
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Bool,
     NoneSet,
     String,
@@ -15,17 +15,17 @@ from openpyxl.descriptors import (
     Integer,
     Convertible,
 )
-from openpyxl.descriptors.nested import NestedText
-from openpyxl.compat import (
+from openpyexcel.descriptors.nested import NestedText
+from openpyexcel.compat import (
     safe_string,
     unicode,
 )
-from openpyxl.utils import (
+from openpyexcel.utils import (
     rows_from_range,
     coordinate_to_tuple,
     get_column_letter,
 )
-from openpyxl.cell import Cell
+from openpyexcel.cell import Cell
 
 
 def collapse_cell_addresses(cells, input_ranges=()):

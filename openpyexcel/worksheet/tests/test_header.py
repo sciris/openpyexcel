@@ -1,9 +1,9 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 
 
 def test_split_into_parts():
@@ -81,7 +81,7 @@ class TestHeaderFooterPart:
 
 
     def test_unicode(self, _HeaderFooterPart):
-        from openpyxl.compat import unicode
+        from openpyexcel.compat import unicode
         hf = _HeaderFooterPart()
         hf.text = u"D\xfcsseldorf"
         assert unicode(hf) == u"D\xfcsseldorf"
@@ -135,7 +135,7 @@ class TestHeaderFooterItem:
 
 
     def test_unicode(self, HeaderFooterItem):
-        from openpyxl.compat import unicode
+        from openpyexcel.compat import unicode
         hf = HeaderFooterItem()
         hf.left.text = u'D\xfcsseldorf'
         assert unicode(hf) == u'&LD\xfcsseldorf'

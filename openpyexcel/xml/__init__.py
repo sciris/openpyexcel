@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
 """Collection of XML resources compatible across different Python versions"""
@@ -12,7 +12,7 @@ def lxml_available():
         LXML = LXML_VERSION >= (3, 3, 1, 0)
         if not LXML:
             import warnings
-            warnings.warn("The installed version of lxml is too old to be used with openpyxl")
+            warnings.warn("The installed version of lxml is too old to be used with openpyexcel")
             return False  # we have it, but too old
         else:
             return True  # we have it, and recent enough

@@ -1,15 +1,15 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
 from copy import copy
 
-from openpyxl.utils.indexed_list import IndexedList
-from openpyxl.styles.styleable import StyleArray
+from openpyexcel.utils.indexed_list import IndexedList
+from openpyexcel.styles.styleable import StyleArray
 
-from openpyxl.xml.functions import tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import tostring
+from openpyexcel.tests.helper import compare_xml
 
 
 class DummyWorkbook:
@@ -123,8 +123,8 @@ class TestColDimension:
 
     def test_col_style(self, ColumnDimension):
         from ..worksheet import Worksheet
-        from openpyxl import Workbook
-        from openpyxl.styles import Font
+        from openpyexcel import Workbook
+        from openpyexcel.styles import Font
 
         ws = Worksheet(Workbook())
         cd = ColumnDimension(ws, index="A")

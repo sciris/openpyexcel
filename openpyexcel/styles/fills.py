@@ -1,7 +1,7 @@
 from __future__ import absolute_import, division
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Float,
     Set,
     Alias,
@@ -10,13 +10,13 @@ from openpyxl.descriptors import (
     Integer,
     MinMax,
 )
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.compat import safe_string
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.compat import safe_string
 
 from .colors import ColorDescriptor, Color
 
-from openpyxl.xml.functions import Element, localname, safe_iterator
-from openpyxl.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import Element, localname, safe_iterator
+from openpyexcel.xml.constants import SHEET_MAIN_NS
 
 
 FILL_NONE = 'none'

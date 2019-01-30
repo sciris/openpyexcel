@@ -1,18 +1,18 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.worksheet.header_footer import HeaderFooter
+from openpyexcel.worksheet.header_footer import HeaderFooter
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Bool,
     Integer,
     Set,
     Typed,
     Sequence
 )
-from openpyxl.descriptors.excel import Guid
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.worksheet.page import (
+from openpyexcel.descriptors.excel import Guid
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.worksheet.page import (
     PageMargins,
     PrintPageSetup
 )

@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.xml.constants import CHART_DRAWING_NS
-from openpyxl.xml.functions import Element, fromstring, tostring
+from openpyexcel.xml.constants import CHART_DRAWING_NS
+from openpyexcel.xml.functions import Element, fromstring, tostring
 
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.tests.helper import compare_xml
 
 class DummyDrawing(object):
 

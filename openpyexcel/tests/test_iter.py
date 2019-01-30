@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import datetime
 import gc
@@ -8,11 +8,11 @@ from io import BytesIO
 
 import pytest
 
-from openpyxl.styles.styleable import StyleArray
-from openpyxl.xml.functions import fromstring
-from openpyxl.reader.excel import load_workbook
-from openpyxl.compat import range
-from openpyxl.cell.read_only import EMPTY_CELL
+from openpyexcel.styles.styleable import StyleArray
+from openpyexcel.xml.functions import fromstring
+from openpyexcel.reader.excel import load_workbook
+from openpyexcel.compat import range
+from openpyexcel.cell.read_only import EMPTY_CELL
 
 
 @pytest.fixture
@@ -29,7 +29,7 @@ def DummyWorkbook():
 
 @pytest.fixture
 def ReadOnlyWorksheet():
-    from openpyxl.worksheet.read_only import ReadOnlyWorksheet
+    from openpyexcel.worksheet.read_only import ReadOnlyWorksheet
     return ReadOnlyWorksheet
 
 
@@ -48,7 +48,7 @@ def test_open_many_sheets(datadir):
                           ]
                          )
 def test_read_dimension(datadir, filename, expected):
-    from openpyxl.worksheet.read_only import read_dimension
+    from openpyexcel.worksheet.read_only import read_dimension
 
     datadir.join("reader").chdir()
     with open(filename) as handle:
@@ -295,8 +295,8 @@ def test_read_style_iter(tmpdir):
     Test if cell styles are read properly in iter mode.
     '''
     tmpdir.chdir()
-    from openpyxl import Workbook
-    from openpyxl.styles import Font
+    from openpyexcel import Workbook
+    from openpyexcel.styles import Font
 
     FONT_NAME = "Times New Roman"
     FONT_SIZE = 15

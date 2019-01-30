@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.workbook import Workbook
-from openpyxl.tests.helper import compare_xml
-from openpyxl.xml.functions import (
+from openpyexcel.workbook import Workbook
+from openpyexcel.tests.helper import compare_xml
+from openpyexcel.xml.functions import (
     fromstring,
     tostring,
     Element,

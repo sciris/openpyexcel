@@ -1,13 +1,13 @@
 from __future__ import absolute_import
 from __future__ import division
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import math
 
-from openpyxl.compat import deprecated
+from openpyexcel.compat import deprecated
 
-from openpyxl.styles.colors import Color, BLACK, WHITE
-from openpyxl.utils.units import (
+from openpyexcel.styles.colors import Color, BLACK, WHITE
+from openpyexcel.utils.units import (
     pixels_to_EMU,
     EMU_to_pixels,
     short_color,

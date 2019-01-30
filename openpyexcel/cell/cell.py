@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Manage individual cells in a spreadsheet.
 
@@ -16,7 +16,7 @@ from copy import copy
 import datetime
 import re
 
-from openpyxl.compat import (
+from openpyexcel.compat import (
     unicode,
     basestring,
     bytes,
@@ -24,27 +24,27 @@ from openpyxl.compat import (
     range,
     deprecated,
 )
-from openpyxl.utils.units import (
+from openpyexcel.utils.units import (
     DEFAULT_ROW_HEIGHT,
     DEFAULT_COLUMN_WIDTH
 )
-from openpyxl.utils.datetime  import (
+from openpyexcel.utils.datetime  import (
     to_excel,
     time_to_days,
     timedelta_to_days,
     from_excel
     )
-from openpyxl.utils.exceptions import (
+from openpyexcel.utils.exceptions import (
     IllegalCharacterError
 )
-from openpyxl.utils.units import points_to_pixels
-from openpyxl.utils import (
+from openpyexcel.utils.units import points_to_pixels
+from openpyexcel.utils import (
     get_column_letter,
     column_index_from_string,
 )
-from openpyxl.styles import numbers, is_date_format
-from openpyxl.styles.styleable import StyleableObject
-from openpyxl.worksheet.hyperlink import Hyperlink
+from openpyexcel.styles import numbers, is_date_format
+from openpyexcel.styles.styleable import StyleableObject
+from openpyexcel.worksheet.hyperlink import Hyperlink
 
 # constants
 
@@ -342,7 +342,7 @@ class Cell(StyleableObject):
         :param column: number of columns to offset
         :type column: int
 
-        :rtype: :class:`openpyxl.cell.Cell`
+        :rtype: :class:`openpyexcel.cell.Cell`
         """
         offset_column = self.col_idx + column
         offset_row = self.row + row
@@ -353,7 +353,7 @@ class Cell(StyleableObject):
     def comment(self):
         """ Returns the comment associated with this cell
 
-            :type: :class:`openpyxl.comments.Comment`
+            :type: :class:`openpyexcel.comments.Comment`
         """
         return self._comment
 

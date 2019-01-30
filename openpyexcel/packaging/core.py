@@ -1,23 +1,23 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import datetime
 
-from openpyxl.compat import safe_string, unicode
-from openpyxl.utils.datetime import (
+from openpyexcel.compat import safe_string, unicode
+from openpyexcel.utils.datetime import (
     CALENDAR_WINDOWS_1900,
     to_ISO8601,
     from_ISO8601,
 )
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     String,
     DateTime,
     Alias,
     )
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors.nested import NestedText
-from openpyxl.xml.functions import (Element, tostring)
-from openpyxl.xml.constants import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.nested import NestedText
+from openpyexcel.xml.functions import (Element, tostring)
+from openpyexcel.xml.constants import (
     COREPROPS_NS,
     DCORE_NS,
     XSI_NS,
@@ -93,7 +93,7 @@ class DocumentProperties(Serialisable):
                  revision=None,
                  version=None,
                  created=datetime.datetime.now(),
-                 creator="openpyxl",
+                 creator="openpyexcel",
                  description=None,
                  identifier=None,
                  language=None,

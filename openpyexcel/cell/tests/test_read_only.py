@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import datetime
 import pytest
 
-from openpyxl.cell.read_only import ReadOnlyCell
-from openpyxl.utils.indexed_list import IndexedList
-from openpyxl.styles.styleable import StyleArray
+from openpyexcel.cell.read_only import ReadOnlyCell
+from openpyexcel.utils.indexed_list import IndexedList
+from openpyexcel.styles.styleable import StyleArray
 
 
 @pytest.fixture(scope='module')
@@ -36,7 +36,7 @@ def test_ctor(dummy_sheet):
 
 
 def test_empty_cell(dummy_sheet):
-    from openpyxl.cell.read_only import EMPTY_CELL
+    from openpyexcel.cell.read_only import EMPTY_CELL
     assert EMPTY_CELL.value is None
     assert EMPTY_CELL.data_type == 'n'
 

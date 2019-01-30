@@ -1,12 +1,12 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.worksheet.drawing import Drawing
-from openpyxl.worksheet.page import PageMargins
+from openpyexcel.worksheet.drawing import Drawing
+from openpyexcel.worksheet.page import PageMargins
 from ..views import ChartsheetView, ChartsheetViewList
 
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 import pytest
 
 class DummyWorkbook:

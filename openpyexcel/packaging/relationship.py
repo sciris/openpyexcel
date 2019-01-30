@@ -1,19 +1,19 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import posixpath
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     String,
     Set,
     NoneSet,
     Alias,
     Sequence,
 )
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.serialisable import Serialisable
 
-from openpyxl.xml.constants import REL_NS, PKG_REL_NS
-from openpyxl.xml.functions import (
+from openpyexcel.xml.constants import REL_NS, PKG_REL_NS
+from openpyexcel.xml.functions import (
     Element,
     fromstring,
     tostring

@@ -1,11 +1,11 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import re
 
-from openpyxl.compat import unicode
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.compat import unicode
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Alias,
     Typed,
     Set,
@@ -20,8 +20,8 @@ from openpyxl.descriptors import (
     Convertible,
     MinMax,
 )
-from openpyxl.descriptors.excel import ExtensionList, CellRange
-from openpyxl.descriptors.sequence import ValueSequence
+from openpyexcel.descriptors.excel import ExtensionList, CellRange
+from openpyexcel.descriptors.sequence import ValueSequence
 
 
 class SortCondition(Serialisable):

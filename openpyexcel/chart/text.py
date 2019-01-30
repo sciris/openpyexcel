@@ -1,14 +1,14 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+# Copyright (c) 2010-2019 openpyexcel
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Alias,
     Sequence,
 )
 
 
-from openpyxl.drawing.text import (
+from openpyexcel.drawing.text import (
     RichTextProperties,
     ListStyle,
     Paragraph,

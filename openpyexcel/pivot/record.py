@@ -1,23 +1,23 @@
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Typed,
     Integer,
     Sequence,
 )
-from openpyxl.descriptors.sequence import (
+from openpyexcel.descriptors.sequence import (
     MultiSequence,
     MultiSequencePart,
 )
-from openpyxl.descriptors.excel import ExtensionList
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.excel import ExtensionList
+from openpyexcel.descriptors.nested import (
     NestedInteger,
     NestedBool,
 )
 
-from openpyxl.xml.constants import SHEET_MAIN_NS
-from openpyxl.xml.functions import tostring
+from openpyexcel.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.functions import tostring
 
 from .fields import (
     Boolean,

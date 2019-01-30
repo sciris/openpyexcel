@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 import pytest
 
 
@@ -14,7 +14,7 @@ import pytest
                          ]
                          )
 def test_safe_string(value, result):
-    from openpyxl.compat import safe_string
+    from openpyexcel.compat import safe_string
     assert safe_string(value) == result
     v = safe_string('s')
     assert v == 's'

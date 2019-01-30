@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from copy import copy
 from keyword import kwlist
@@ -14,8 +14,8 @@ from .sequence import (
 )
 from .namespace import namespaced
 
-from openpyxl.compat import safe_string
-from openpyxl.xml.functions import (
+from openpyexcel.compat import safe_string
+from openpyexcel.xml.functions import (
     Element,
     localname,
 )

@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Write a .xlsx file."""
 
@@ -9,8 +9,8 @@ import re
 from zipfile import ZipFile, ZIP_DEFLATED
 
 # package imports
-from openpyxl.utils.exceptions import InvalidFileException
-from openpyxl.xml.constants import (
+from openpyexcel.utils.exceptions import InvalidFileException
+from openpyexcel.xml.constants import (
     ARC_SHARED_STRINGS,
     ARC_CONTENT_TYPES,
     ARC_ROOT_RELS,
@@ -26,27 +26,27 @@ from openpyxl.xml.constants import (
     PACKAGE_IMAGES,
     PACKAGE_XL
     )
-from openpyxl.drawing.spreadsheet_drawing import SpreadsheetDrawing
-from openpyxl.xml.functions import tostring, fromstring, Element
-from openpyxl.packaging.manifest import Manifest
-from openpyxl.packaging.relationship import (
+from openpyexcel.drawing.spreadsheet_drawing import SpreadsheetDrawing
+from openpyexcel.xml.functions import tostring, fromstring, Element
+from openpyexcel.packaging.manifest import Manifest
+from openpyexcel.packaging.relationship import (
     get_rels_path,
     RelationshipList,
     Relationship,
 )
-from openpyxl.packaging.extended import ExtendedProperties
+from openpyexcel.packaging.extended import ExtendedProperties
 
-from openpyxl.writer.strings import write_string_table
-from openpyxl.writer.workbook import (
+from openpyexcel.writer.strings import write_string_table
+from openpyexcel.writer.workbook import (
     write_root_rels,
     write_workbook_rels,
     write_workbook,
 )
-from openpyxl.writer.theme import write_theme
-from openpyxl.writer.worksheet import write_worksheet
-from openpyxl.styles.stylesheet import write_stylesheet
+from openpyexcel.writer.theme import write_theme
+from openpyexcel.writer.worksheet import write_worksheet
+from openpyexcel.styles.stylesheet import write_stylesheet
 
-from openpyxl.comments.comment_sheet import CommentSheet
+from openpyexcel.comments.comment_sheet import CommentSheet
 
 
 class ExcelWriter(object):
@@ -271,7 +271,7 @@ def save_workbook(workbook, filename,):
     """Save the given workbook on the filesystem under the name filename.
 
     :param workbook: the workbook to save
-    :type workbook: :class:`openpyxl.workbook.Workbook`
+    :type workbook: :class:`openpyexcel.workbook.Workbook`
 
     :param filename: the path to which save the workbook
     :type filename: string

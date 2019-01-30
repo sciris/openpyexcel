@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 from zipfile import ZipFile
 
-from openpyxl.xml.functions import fromstring
+from openpyexcel.xml.functions import fromstring
 
 from .. line_chart import LineChart
 from .. axis import NumericAxis, DateAxis

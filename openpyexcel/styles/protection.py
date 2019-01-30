@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import Bool
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import Bool
+from openpyexcel.descriptors.serialisable import Serialisable
 
 
 class Protection(Serialisable):

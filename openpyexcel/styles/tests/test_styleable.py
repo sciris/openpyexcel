@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
 
-from openpyxl.utils.indexed_list import IndexedList
+from openpyexcel.utils.indexed_list import IndexedList
 from ..named_styles import (
     NamedStyleList,
     NamedStyle,

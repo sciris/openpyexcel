@@ -1,15 +1,15 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Alias,
     Sequence,
     Integer
 )
-from openpyxl.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors.serialisable import Serialisable
 
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedValue,
     NestedBool,
     NestedNoneSet,
@@ -20,9 +20,9 @@ from openpyxl.descriptors.nested import (
 )
 from .colors import ColorDescriptor, Color, BLACK
 
-from openpyxl.compat import safe_string
-from openpyxl.xml.functions import Element, SubElement
-from openpyxl.xml.constants import SHEET_MAIN_NS
+from openpyexcel.compat import safe_string
+from openpyexcel.xml.functions import Element, SubElement
+from openpyexcel.xml.constants import SHEET_MAIN_NS
 
 
 def _no_value(tagname, value, namespace=None):

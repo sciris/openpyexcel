@@ -1,10 +1,10 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import re
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Alias,
     Typed,
     String,
@@ -16,9 +16,9 @@ from openpyxl.descriptors import (
     Sequence,
     Descriptor,
 )
-from openpyxl.compat import safe_string
-from openpyxl.formula import Tokenizer
-from openpyxl.utils.cell import (
+from openpyexcel.compat import safe_string
+from openpyexcel.formula import Tokenizer
+from openpyexcel.utils.cell import (
     SHEETRANGE_RE,
     SHEET_TITLE,
 )

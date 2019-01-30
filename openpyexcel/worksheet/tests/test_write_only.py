@@ -1,17 +1,17 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 
 import datetime
 from io import BytesIO
 
-from openpyxl.xml.functions import xmlfile
+from openpyexcel.xml.functions import xmlfile
 
-from openpyxl.utils.indexed_list import IndexedList
-from openpyxl.utils.datetime  import CALENDAR_WINDOWS_1900
+from openpyexcel.utils.indexed_list import IndexedList
+from openpyexcel.utils.datetime  import CALENDAR_WINDOWS_1900
 
-from openpyxl.styles.styleable import StyleArray
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.styles.styleable import StyleArray
+from openpyexcel.tests.helper import compare_xml
 
 import pytest
 
@@ -152,7 +152,7 @@ def test_invalid_append(WriteOnlyWorksheet, row):
 
 def test_cell_comment(WriteOnlyWorksheet):
     ws = WriteOnlyWorksheet
-    from openpyxl.comments import Comment
+    from openpyexcel.comments import Comment
     from .. write_only import WriteOnlyCell
     cell = WriteOnlyCell(ws, 1)
     comment = Comment('hello', 'me')
@@ -354,7 +354,7 @@ def test_write_height(WriteOnlyWorksheet):
 
 
 def test_data_validations(WriteOnlyWorksheet):
-    from openpyxl.worksheet.datavalidation import DataValidation
+    from openpyexcel.worksheet.datavalidation import DataValidation
     ws = WriteOnlyWorksheet
     dv = DataValidation(sqref="A1")
     ws.data_validations.append(dv)
@@ -385,7 +385,7 @@ def test_data_validations(WriteOnlyWorksheet):
 
 
 def test_conditional_formatting(WriteOnlyWorksheet):
-    from openpyxl.formatting.rule import CellIsRule
+    from openpyexcel.formatting.rule import CellIsRule
     ws = WriteOnlyWorksheet
     rule = CellIsRule(operator='lessThan', formula=['C$1'], stopIfTrue=True)
     ws.conditional_formatting.add("C1:C10", rule)

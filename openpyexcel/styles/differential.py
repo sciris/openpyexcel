@@ -1,15 +1,15 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors import (
+from openpyexcel.descriptors import (
     Integer,
     String,
     Typed,
     Sequence,
     Alias,
 )
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.styles import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.styles import (
     Font,
     Fill,
     GradientFill,

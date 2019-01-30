@@ -1,13 +1,13 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.compat import basestring
+from openpyexcel.compat import basestring
 
-from openpyxl.descriptors.nested import (
+from openpyexcel.descriptors.nested import (
     NestedMinMax
     )
 
-from openpyxl.descriptors import Typed
+from openpyexcel.descriptors import Typed
 
 from .data_source import NumFmt
 

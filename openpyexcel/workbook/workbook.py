@@ -1,45 +1,45 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 """Workbook is the top-level container for all document information."""
 from copy import copy
 
-from openpyxl.compat import deprecated, long
-from openpyxl.worksheet import Worksheet
-from openpyxl.worksheet.read_only import ReadOnlyWorksheet
-from openpyxl.worksheet.write_only import WriteOnlyWorksheet
-from openpyxl.worksheet.copier import WorksheetCopy
+from openpyexcel.compat import deprecated, long
+from openpyexcel.worksheet import Worksheet
+from openpyexcel.worksheet.read_only import ReadOnlyWorksheet
+from openpyexcel.worksheet.write_only import WriteOnlyWorksheet
+from openpyexcel.worksheet.copier import WorksheetCopy
 
-from openpyxl.utils import quote_sheetname
-from openpyxl.utils.indexed_list import IndexedList
-from openpyxl.utils.datetime  import CALENDAR_WINDOWS_1900
-from openpyxl.utils.exceptions import ReadOnlyWorkbookException
+from openpyexcel.utils import quote_sheetname
+from openpyexcel.utils.indexed_list import IndexedList
+from openpyexcel.utils.datetime  import CALENDAR_WINDOWS_1900
+from openpyexcel.utils.exceptions import ReadOnlyWorkbookException
 
-from openpyxl.writer.excel import save_workbook, save_dump
+from openpyexcel.writer.excel import save_workbook, save_dump
 
-from openpyxl.styles.cell_style import StyleArray
-from openpyxl.styles.named_styles import NamedStyle
-from openpyxl.styles.differential import DifferentialStyleList
-from openpyxl.styles.alignment import Alignment
-from openpyxl.styles.borders import DEFAULT_BORDER
-from openpyxl.styles.fills import DEFAULT_EMPTY_FILL, DEFAULT_GRAY_FILL
-from openpyxl.styles.fonts import DEFAULT_FONT
-from openpyxl.styles.protection import Protection
-from openpyxl.styles.colors import COLOR_INDEX
-from openpyxl.styles.named_styles import NamedStyleList
-from openpyxl.styles.table import TableStyleList
+from openpyexcel.styles.cell_style import StyleArray
+from openpyexcel.styles.named_styles import NamedStyle
+from openpyexcel.styles.differential import DifferentialStyleList
+from openpyexcel.styles.alignment import Alignment
+from openpyexcel.styles.borders import DEFAULT_BORDER
+from openpyexcel.styles.fills import DEFAULT_EMPTY_FILL, DEFAULT_GRAY_FILL
+from openpyexcel.styles.fonts import DEFAULT_FONT
+from openpyexcel.styles.protection import Protection
+from openpyexcel.styles.colors import COLOR_INDEX
+from openpyexcel.styles.named_styles import NamedStyleList
+from openpyexcel.styles.table import TableStyleList
 
-from openpyxl.chartsheet import Chartsheet
+from openpyexcel.chartsheet import Chartsheet
 from .defined_name import DefinedName, DefinedNameList
-from openpyxl.packaging.core import DocumentProperties
-from openpyxl.packaging.relationship import RelationshipList
+from openpyexcel.packaging.core import DocumentProperties
+from openpyexcel.packaging.relationship import RelationshipList
 from .child import _WorkbookChild
 from .protection import DocumentSecurity
 from .properties import CalcProperties
 from .views import BookView
 
 
-from openpyxl.xml.constants import (
+from openpyexcel.xml.constants import (
     XLSM,
     XLSX,
     XLTM,
@@ -146,7 +146,7 @@ class Workbook(object):
     def active(self):
         """Get the currently active sheet or None
 
-        :type: :class:`openpyxl.worksheet.worksheet.Worksheet`
+        :type: :class:`openpyexcel.worksheet.worksheet.Worksheet`
         """
         try:
             return self._sheets[self._active_sheet_index]
@@ -286,7 +286,7 @@ class Workbook(object):
     def worksheets(self):
         """A list of sheets in this workbook
 
-        :type: list of :class:`openpyxl.worksheet.worksheet.Worksheet`
+        :type: list of :class:`openpyexcel.worksheet.worksheet.Worksheet`
         """
         return [s for s in self._sheets if isinstance(s, (Worksheet, ReadOnlyWorksheet, WriteOnlyWorksheet))]
 
@@ -294,7 +294,7 @@ class Workbook(object):
     def chartsheets(self):
         """A list of Chartsheets in this workbook
 
-        :type: list of :class:`openpyxl.chartsheet.chartsheet.Chartsheet`
+        :type: list of :class:`openpyexcel.chartsheet.chartsheet.Chartsheet`
         """
         return [s for s in self._sheets if isinstance(s, Chartsheet)]
 
@@ -365,7 +365,7 @@ class Workbook(object):
         """
         The mime type is determined by whether a workbook is a template or
         not and whether it contains macros or not. Excel requires the file
-        extension to match but openpyxl does not enforce this.
+        extension to match but openpyexcel does not enforce this.
 
         """
         ct = self.template and XLTX or XLSX
@@ -381,7 +381,7 @@ class Workbook(object):
         .. warning::
             When creating your workbook using `write_only` set to True,
             you will only be able to call this function once. Subsequents attempts to
-            modify or save the file will raise an :class:`openpyxl.shared.exc.WorkbookAlreadySaved` exception.
+            modify or save the file will raise an :class:`openpyexcel.shared.exc.WorkbookAlreadySaved` exception.
         """
         if self.read_only:
             raise TypeError("""Workbook is read-only""")

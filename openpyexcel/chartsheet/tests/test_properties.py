@@ -1,9 +1,9 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
 import pytest
-from openpyxl.xml.functions import fromstring, tostring
-from openpyxl.tests.helper import compare_xml
+from openpyexcel.xml.functions import fromstring, tostring
+from openpyexcel.tests.helper import compare_xml
 
 
 
@@ -27,7 +27,7 @@ class TestChartsheetPr:
         assert chartsheetPr.tabColor.rgb == "FFDCD8F4"
 
     def test_write(self, ChartsheetProperties):
-        from openpyxl.styles import Color
+        from openpyexcel.styles import Color
 
         chartsheetPr = ChartsheetProperties()
         chartsheetPr.codeName = "Chart Openpyxl"

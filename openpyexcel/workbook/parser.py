@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Alias,
     Typed,
     String,
@@ -12,11 +12,11 @@ from openpyxl.descriptors import (
     Set,
     Sequence,
 )
-from openpyxl.descriptors.excel import ExtensionList, Relation
-from openpyxl.descriptors.sequence import NestedSequence
-from openpyxl.descriptors.nested import NestedString
+from openpyexcel.descriptors.excel import ExtensionList, Relation
+from openpyexcel.descriptors.sequence import NestedSequence
+from openpyexcel.descriptors.nested import NestedString
 
-from openpyxl.xml.constants import SHEET_MAIN_NS
+from openpyexcel.xml.constants import SHEET_MAIN_NS
 
 from .defined_name import DefinedName, DefinedNameList
 from .external_reference import ExternalReference

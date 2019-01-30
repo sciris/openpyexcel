@@ -1,8 +1,8 @@
 from __future__ import absolute_import
-# Copyright (c) 2010-2019 openpyxl
+# Copyright (c) 2010-2019 openpyexcel
 
-from openpyxl.descriptors.serialisable import Serialisable
-from openpyxl.descriptors import (
+from openpyexcel.descriptors.serialisable import Serialisable
+from openpyexcel.descriptors import (
     Descriptor,
     Alias,
     Typed,
@@ -15,12 +15,12 @@ from openpyxl.descriptors import (
     String,
     Sequence,
 )
-from openpyxl.descriptors.excel import ExtensionList, CellRange
-from openpyxl.descriptors.sequence import NestedSequence
-from openpyxl.xml.constants import SHEET_MAIN_NS, REL_NS
-from openpyxl.xml.functions import tostring
-from openpyxl.utils import range_boundaries
-from openpyxl.utils.escape import escape, unescape
+from openpyexcel.descriptors.excel import ExtensionList, CellRange
+from openpyexcel.descriptors.sequence import NestedSequence
+from openpyexcel.xml.constants import SHEET_MAIN_NS, REL_NS
+from openpyexcel.xml.functions import tostring
+from openpyexcel.utils import range_boundaries
+from openpyexcel.utils.escape import escape, unescape
 
 from .related import Related
 
