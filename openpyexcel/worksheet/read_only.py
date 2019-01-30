@@ -174,6 +174,8 @@ class ReadOnlyWorksheet(object):
                 if formula is not None and not data_only:
                     data_type = 'f'
                     value = "=%s" % formula
+                    if data_only == 'both':
+                        value = (value, cell.findtext(VALUE_TAG) or None) # CK: Allow reading formula+cached value
 
                 elif data_type == 'inlineStr':
                     child = cell.find(INLINE_TAG)

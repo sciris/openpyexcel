@@ -151,10 +151,15 @@ class WorkSheetParser(object):
         # assign formula to cell value unless only the data is desired
         if formula is not None and not self.data_only:
             data_type = 'f'
+            cached_value = None # CK: Allow read-in of both
+            if self.data_only == 'both':
+                cached_value = value
             if formula.text:
                 value = "=" + formula.text
             else:
                 value = "="
+            if cached_value is not None:
+                value = (value, cached_value)
             formula_type = formula.get('t')
             if formula_type:
                 if formula_type != "shared":
