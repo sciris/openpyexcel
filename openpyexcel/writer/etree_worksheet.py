@@ -65,10 +65,15 @@ def etree_write_cell(xf, worksheet, cell, styled=None):
     if styled:
         attributes['s'] = '%d' % cell.style_id
 
+    value = cell._value
+    
     if cell.data_type != 'f':
         attributes['t'] = cell.data_type
-
-    value = cell._value
+    else:
+        if isinstance(value, tuple): # CK: fix up data types for formulas
+            print('FIRST WORKING on %s' % str(value))
+            tmpval,data_type = cell._bind_value(value[1], return_output=True)
+            attributes['t'] = data_type
 
     if cell.data_type == "d":
         if cell.parent.parent.iso_dates:
@@ -93,8 +98,9 @@ def etree_write_cell(xf, worksheet, cell, styled=None):
         formula = SubElement(el, 'f', shared_formula)
         if value is not None: # CK: Allow writing formulas and values
             if isinstance(value, tuple):
+                print('that loop')
                 formula.text = value[0][1:]
-                value = value[1]
+                value = cell._infer_value(value[1])
             else:
                 formula.text = value[1:]
                 value = None
@@ -117,10 +123,18 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
     if styled:
         attributes['s'] = '%d' % cell.style_id
 
+    value = cell._value
+    
     if cell.data_type != 'f':
         attributes['t'] = cell.data_type
-
-    value = cell._value
+    else:
+        if isinstance(value, tuple): # CK: fix up data types for formulas
+            print('WORKING on %s' % str(value))
+            tmpval,data_type = cell._infer_value(value[1], return_output=True)
+            attributes['t'] = data_type
+            if attributes['t'] == 'f':
+                print('BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo')
+                attributes['t'] = 'inlineStr'
 
     if cell.data_type == "d":
         if cell.parent.parent.iso_dates:
@@ -146,7 +160,9 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
             if value is not None: # CK: Allow writing formulas and values
                 if isinstance(value, tuple):
                     formulatext = value[0][1:]
-                    value = value[1]
+                    value,tmp_datatype  = cell._infer_value(value[1], return_output=True)
+#                    print('this loop: %s' % repr(value))
+#                    print('um? %s' % repr(cell._value))
                 else:
                     formulatext = value[1:]
                     value = None
@@ -157,6 +173,7 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
             value = worksheet.parent.shared_strings.add(value)
         with xf.element("v"):
             if value is not None:
+                print('hiiiiiii!!!! %s %s' % (repr(value), repr(attributes['t'])))
                 xf.write(safe_string(value))
 
         if cell.hyperlink:

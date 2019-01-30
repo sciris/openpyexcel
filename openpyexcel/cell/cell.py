@@ -177,13 +177,15 @@ class Cell(StyleableObject):
         self.data_type = data_type
 
 
-    def _bind_value(self, value):
+    def _bind_value(self, value, return_output=False):
         """Given a value, infer the correct data type"""
+        
+        print('??????? %s' % repr(value))
 
-        self.data_type = "n"
+        data_type = "n"
 
         if value is True or value is False:
-            self.data_type = self.TYPE_BOOL
+            data_type = self.TYPE_BOOL
 
         elif isinstance(value, NUMERIC_TYPES):
             pass
@@ -191,29 +193,36 @@ class Cell(StyleableObject):
         elif isinstance(value, TIME_TYPES):
             if not is_date_format(self.number_format):
                 self._set_time_format(value)
-            self.data_type = "d"
+            data_type = "d"
 
         elif isinstance(value, STRING_TYPES):
             value = self.check_string(value)
-            self.data_type = self.TYPE_STRING
+            data_type = self.TYPE_STRING
             if len(value) > 1 and value.startswith("="):
-                self.data_type = self.TYPE_FORMULA
+                data_type = self.TYPE_FORMULA
             elif value in self.ERROR_CODES:
-                self.data_type = self.TYPE_ERROR
+                data_type = self.TYPE_ERROR
             elif self.guess_types:
                 value = self._infer_value(value)
         
         elif isinstance(value, tuple): # CK: for reading a formula and stored value
-            self.data_type = self.TYPE_FORMULA
+            data_type = self.TYPE_FORMULA
+            value = (value[0], self._infer_value(value[1])) # Ensure it has the correct value
+            print('DKFJDKFJDKJFD %s' % repr(value))
 
         elif value is not None:
             raise ValueError("Cannot convert {0!r} to Excel".format(value))
 
-        self._value = value
+        if return_output:
+            return (value, data_type)
+        else:
+            self.data_type = data_type
+            self._value = value
 
 
-    def _infer_value(self, value):
+    def _infer_value(self, value, return_output=False):
         """Given a string, infer type and formatting options."""
+        print('INFERRING %s' % repr(value))
         if not isinstance(value, unicode):
             value = str(value)
 
@@ -226,10 +235,17 @@ class Cell(StyleableObject):
             # time detection
             v = self._cast_time(value)
         if v is not None:
-            self.data_type = self.TYPE_NUMERIC
-            return v
-
-        return value
+            print('WAS INFERED AS %s' % repr(v))
+            if return_output:
+                return (v, self.TYPE_NUMERIC)
+            else:
+                self.data_type = self.TYPE_NUMERIC
+                return v
+        
+        if return_output:
+            return (value, self.data_type)
+        else:
+            return value
 
 
     def _cast_numeric(self, value):
