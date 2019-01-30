@@ -1,33 +1,33 @@
-.. image:: https://coveralls.io/repos/bitbucket/openpyxl/openpyxl/badge.svg?branch=default
-    :target: https://coveralls.io/bitbucket/openpyxl/openpyxl?branch=default
+.. image:: https://coveralls.io/repos/bitbucket/openpyexcel/openpyexcel/badge.svg?branch=default
+    :target: https://coveralls.io/bitbucket/openpyexcel/openpyexcel?branch=default
     :alt: coverage status
 
 Introduction
 ------------
 
-openpyxl is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
+openpyexcel is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
 
 It was born from lack of existing library to read/write natively from Python
 the Office Open XML format.
 
-All kudos to the PHPExcel team as openpyxl was initially based on PHPExcel.
+All kudos to the PHPExcel team as openpyexcel was initially based on PHPExcel.
 
 
 Security
 --------
 
-By default openpyxl does not guard against quadratic blowup or billion laughs
+By default openpyexcel does not guard against quadratic blowup or billion laughs
 xml attacks. To guard against these attacks install defusedxml.
 
 Mailing List
 ------------
 
-The user list can be found on http://groups.google.com/group/openpyxl-users
+The user list can be found on http://groups.google.com/group/openpyexcel-users
 
 
 Sample code::
 
-    from openpyxl import Workbook
+    from openpyexcel import Workbook
     wb = Workbook()
 
     # grab the active worksheet
@@ -50,10 +50,10 @@ Sample code::
 Documentation
 -------------
 
-The documentation is at: https://openpyxl.readthedocs.io
+The documentation is at: https://openpyexcel.readthedocs.io
 
 * installation methods
 * code examples
 * instructions for contributing
 
-Release notes: https://openpyxl.readthedocs.io/en/stable/changes.html
+Release notes: https://openpyexcel.readthedocs.io/en/stable/changes.html

@@ -1,6 +1,6 @@
-prune openpyxl/sample
-prune openpyxl/benchmarks
-prune openpyxl/develop
+prune openpyexcel/sample
+prune openpyexcel/benchmarks
+prune openpyexcel/develop
 prune scratchpad
 prune doc
 

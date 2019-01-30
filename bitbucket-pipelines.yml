@@ -1,4 +1,4 @@
-image: openpyxl/openpyxl-ci
+image: openpyexcel/openpyexcel-ci
 
 pipelines:
   pull-requests:
@@ -21,5 +21,5 @@ pipelines:
         - export GIT_COMMITTER_EMAIL=$(hg tip --template '{author|email}\n')
         - export GIT_MESSAGE=$(hg tip --template '{desc}\n')
         - export GIT_BRANCH=$(hg branch)
-        - export GIT_URL=https://bitbucket.org/openpyxl/openpyxl
+        - export GIT_URL=https://bitbucket.org/openpyexcel/openpyexcel
         - /tools/clean-launch.sh tox -e cov

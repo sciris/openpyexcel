@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Setup script for packaging openpyxl.
+"""Setup script for packaging openpyexcel.
 
 To build a package for distribution:
     python setup.py sdist
@@ -27,13 +27,13 @@ except IOError:
 
 try:
     from importlib.util import module_from_spec, spec_from_file_location
-    spec = spec_from_file_location("constants", "./openpyxl/_constants.py")
+    spec = spec_from_file_location("constants", "./openpyexcel/_constants.py")
     constants = module_from_spec(spec)
     spec.loader.exec_module(constants)
 except ImportError:
     # python2.7
     import imp
-    constants = imp.load_source("constants", "./openpyxl/_constants.py")
+    constants = imp.load_source("constants", "./openpyexcel/_constants.py")
 
 __author__ = constants.__author__
 __author_email__ = constants.__author_email__
@@ -44,7 +44,7 @@ __version__ = constants.__version__
 
 
 setup(
-    name='openpyxl',
+    name='openpyexcel',
     packages=find_packages(
         exclude=["*.tests", "*.test_.*", "test_.*", "tests", "develop"]
         ),
@@ -62,9 +62,9 @@ setup(
         'jdcal', 'et_xmlfile',
         ],
     project_urls={
-        'Documentation': 'https://openpyxl.readthedocs.io/en/stable/',
-        'Source': 'https://bitbucket.org/openpyxl/openpyxl',
-        'Tracker': 'https://bitbucket.org/openpyxl/openpyxl/issues',
+        'Documentation': 'https://openpyexcel.readthedocs.io/en/stable/',
+        'Source': 'https://bitbucket.org/openpyexcel/openpyexcel',
+        'Tracker': 'https://bitbucket.org/openpyexcel/openpyexcel/issues',
     },
     classifiers=[
                  'Development Status :: 5 - Production/Stable',
