@@ -8,8 +8,8 @@ from openpyexcel.comments.comment_sheet import CommentRecord
 from openpyexcel.xml.functions import Element, SubElement
 from openpyexcel import LXML
 from openpyexcel.utils.datetime import to_excel, days_to_time
+from openpyexcel.cell import Cell
 from datetime import timedelta
-
 
 def get_rows_to_write(worksheet):
     """Return all rows, and any cells that they contain"""
@@ -69,6 +69,10 @@ def etree_write_cell(xf, worksheet, cell, styled=None):
 
     if cell.data_type != 'f':
         attributes['t'] = cell.data_type
+    else:
+        _, attributes['t'] = cell._bind_value(cell.cached_value, return_output=True)
+        if attributes['t'] == Cell.TYPE_STRING:
+            attributes['t'] = Cell.TYPE_FORMULA_CACHE_STRING
 
     if cell.data_type == "d":
         if cell.parent.parent.iso_dates:
@@ -94,7 +98,6 @@ def etree_write_cell(xf, worksheet, cell, styled=None):
         if value is not None:
             formula.text = value[1:]
         value = cell.cached_value
-        _, attributes['t'] = cell._bind_value(cell.cached_value, return_output=True)
 
     if cell.data_type == 's':
         value = worksheet.parent.shared_strings.add(value)
@@ -119,6 +122,10 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
     
     if cell.data_type != 'f':
         attributes['t'] = cell.data_type
+    else:
+        _, attributes['t'] = cell._bind_value(cell.cached_value, return_output=True)
+        if attributes['t'] == Cell.TYPE_STRING:
+            attributes['t'] = Cell.TYPE_FORMULA_CACHE_STRING
 
     if cell.data_type == "d":
         if cell.parent.parent.iso_dates:
@@ -142,7 +149,6 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
             shared_formula = worksheet.formula_attributes.get(coordinate, {})
             formulatext = value[1:]
             value = cell.cached_value
-            _, attributes['t'] = cell._bind_value(cell.cached_value, return_output=True)
 
             with xf.element('f', shared_formula):
                 xf.write(formulatext)
