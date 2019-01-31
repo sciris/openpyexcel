@@ -271,7 +271,7 @@ class Worksheet(_WorkbookChild):
             self.print_title_rows = '1:%d' % n
 
 
-    def cell(self, row, column, value=None):
+    def cell(self, row, column, value=None, cached_value=None):
         """
         Returns a cell object based on the given coordinates.
 
@@ -298,6 +298,10 @@ class Worksheet(_WorkbookChild):
         cell = self._get_cell(row, column)
         if value is not None:
             cell.value = value
+
+        if value or cached_value:
+            # Update the cached value if requested even if the value is not changed
+            cell.cached_value = cached_value
 
         return cell
 

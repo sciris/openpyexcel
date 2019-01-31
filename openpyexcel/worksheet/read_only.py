@@ -169,14 +169,12 @@ class ReadOnlyWorksheet(object):
                 data_type = cell.get('t', 'n')
                 style_id = int(cell.get('s', 0))
                 value = None
-
+                cached_value = None
                 formula = cell.findtext(FORMULA_TAG)
-                if formula is not None and (self.data_only == 'both' or not data_only):
+                if formula is not None and not data_only:
                     data_type = 'f'
                     value = "=%s" % formula
-                    if data_only == 'both':
-                        value = (value, cell.findtext(VALUE_TAG) or None) # CK: Allow reading formula+cached value
-
+                    cached_value = cell.findtext(VALUE_TAG) or None
                 elif data_type == 'inlineStr':
                     child = cell.find(INLINE_TAG)
                     if child is not None:
@@ -187,7 +185,7 @@ class ReadOnlyWorksheet(object):
                     value = cell.findtext(VALUE_TAG) or None
 
                 yield ReadOnlyCell(self, row, column,
-                                   value, data_type, style_id)
+                                   value, data_type, style_id, cached_value)
             col_counter = column + 1
 
         if max_col is not None:

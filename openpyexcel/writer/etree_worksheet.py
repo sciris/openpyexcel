@@ -66,13 +66,9 @@ def etree_write_cell(xf, worksheet, cell, styled=None):
         attributes['s'] = '%d' % cell.style_id
 
     value = cell._value
-    
+
     if cell.data_type != 'f':
         attributes['t'] = cell.data_type
-    else:
-        if isinstance(value, tuple): # CK: fix up data types for formulas
-            tmpval,data_type = cell._bind_value(value[1], return_output=True) # WARNING, HACKY
-            attributes['t'] = data_type
 
     if cell.data_type == "d":
         if cell.parent.parent.iso_dates:
@@ -95,16 +91,13 @@ def etree_write_cell(xf, worksheet, cell, styled=None):
     if cell.data_type == 'f':
         shared_formula = worksheet.formula_attributes.get(coordinate, {})
         formula = SubElement(el, 'f', shared_formula)
-        if value is not None: # CK: Allow writing formulas and values
-            if isinstance(value, tuple):
-                formula.text = value[0][1:]
-                value = cell._infer_value(value[1])
-            else:
-                formula.text = value[1:]
-                value = None
+        if value is not None:
+            formula.text = value[1:]
+        value = cell.cached_value
 
     if cell.data_type == 's':
         value = worksheet.parent.shared_strings.add(value)
+
     cell_content = SubElement(el, 'v')
     if value is not None:
         cell_content.text = safe_string(value)
@@ -152,14 +145,9 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
     with xf.element('c', attributes):
         if cell.data_type == 'f':
             shared_formula = worksheet.formula_attributes.get(coordinate, {})
-            
-            if value is not None: # CK: Allow writing formulas and values
-                if isinstance(value, tuple):
-                    formulatext = value[0][1:]
-                    value,tmp_datatype  = cell._infer_value(value[1], return_output=True) # WARNING, HACKY
-                else:
-                    formulatext = value[1:]
-                    value = None
+            formulatext = value[1:]
+            value = cell.cached_value
+
             with xf.element('f', shared_formula):
                 xf.write(formulatext)
 

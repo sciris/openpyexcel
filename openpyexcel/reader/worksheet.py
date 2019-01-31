@@ -140,6 +140,7 @@ class WorkSheetParser(object):
 
     def parse_cell(self, element):
         value = element.find(self.VALUE_TAG)
+        cached_value = None
         if value is not None:
             value = value.text
         formula = element.find(self.FORMULA_TAG)
@@ -149,26 +150,19 @@ class WorkSheetParser(object):
         style_id = element.get('s')
 
         # assign formula to cell value unless only the data is desired
-        if formula is not None and (self.data_only == 'both' or not self.data_only):
+        if formula is not None and not self.data_only:
             data_type = 'f'
-            if self.data_only == 'both':
-                cached_value = value
-            else:
-                cached_value = None # CK: Allow read-in of both
-            
+            cached_value = value
+
             if formula.text:
                 value = "=" + formula.text
             else:
                 value = "="
-            
-            if cached_value is not None:
-                value = (value, cached_value)
-            
+
             formula_type = formula.get('t')
             if formula_type:
                 if formula_type != "shared":
                     self.ws.formula_attributes[coordinate] = dict(formula.attrib)
-
                 else:
                     si = formula.get('si')  # Shared group index for shared formulas
 
@@ -256,7 +250,7 @@ class WorkSheetParser(object):
         else:
             cell._value = value
             cell.data_type = data_type
-
+        cell.cached_value = cached_value
 
     def parse_merge(self, element):
         merged = MergeCells.from_tree(element)

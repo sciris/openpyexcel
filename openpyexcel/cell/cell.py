@@ -86,6 +86,7 @@ class Cell(StyleableObject):
         'parent',
         '_hyperlink',
         '_comment',
+        'cached_value',
                  )
 
     ERROR_CODES = ERROR_CODES
@@ -103,7 +104,7 @@ class Cell(StyleableObject):
                    TYPE_NULL, TYPE_INLINE, TYPE_ERROR, TYPE_FORMULA_CACHE_STRING)
 
 
-    def __init__(self, worksheet, column=None, row=None, value=None, col_idx=None, style_array=None):
+    def __init__(self, worksheet, column=None, row=None, value=None, col_idx=None, style_array=None, cached_value=None):
         super(Cell, self).__init__(worksheet, style_array)
         self.row = row
         """Row number of this cell (1-based)"""
@@ -113,6 +114,7 @@ class Cell(StyleableObject):
         self.data_type = 'n'
         if value is not None:
             self.value = value
+        self.cached_value = cached_value
         self._comment = None
         if column is not None:
             col_idx = column_index_from_string(column)
@@ -202,10 +204,6 @@ class Cell(StyleableObject):
                 data_type = self.TYPE_ERROR
             elif self.guess_types:
                 value = self._infer_value(value)
-        
-        elif isinstance(value, tuple): # CK: for reading a formula and stored value
-            data_type = self.TYPE_FORMULA
-            value = (value[0], self._infer_value(value[1])) # Ensure it has the correct value
 
         elif value is not None:
             raise ValueError("Cannot convert {0!r} to Excel".format(value))
@@ -387,5 +385,5 @@ class Cell(StyleableObject):
         self._comment = value
 
 
-def WriteOnlyCell(ws=None, value=None):
-    return Cell(worksheet=ws, column='A', row=1, value=value)
+def WriteOnlyCell(ws=None, value=None, cached_value=None):
+    return Cell(worksheet=ws, column='A', row=1, value=value, cached_value=cached_value)
