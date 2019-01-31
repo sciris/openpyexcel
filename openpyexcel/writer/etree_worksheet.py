@@ -94,6 +94,7 @@ def etree_write_cell(xf, worksheet, cell, styled=None):
         if value is not None:
             formula.text = value[1:]
         value = cell.cached_value
+        _, attributes['t'] = cell._bind_value(cell.cached_value, return_output=True)
 
     if cell.data_type == 's':
         value = worksheet.parent.shared_strings.add(value)
@@ -118,12 +119,6 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
     
     if cell.data_type != 'f':
         attributes['t'] = cell.data_type
-    else:
-        if isinstance(value, tuple): # CK: fix up data types for formulas -- WARNING, HACKY
-            tmpval,data_type = cell._infer_value(value[1], return_output=True)
-            attributes['t'] = data_type
-            if attributes['t'] == 'f':
-                attributes['t'] = 'inlineStr'
 
     if cell.data_type == "d":
         if cell.parent.parent.iso_dates:
@@ -147,6 +142,7 @@ def lxml_write_cell(xf, worksheet, cell, styled=False):
             shared_formula = worksheet.formula_attributes.get(coordinate, {})
             formulatext = value[1:]
             value = cell.cached_value
+            _, attributes['t'] = cell._bind_value(cell.cached_value, return_output=True)
 
             with xf.element('f', shared_formula):
                 xf.write(formulatext)

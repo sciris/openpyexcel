@@ -215,7 +215,7 @@ class Cell(StyleableObject):
             self._value = value
 
 
-    def _infer_value(self, value, return_output=False):
+    def _infer_value(self, value):
         """Given a string, infer type and formatting options."""
         if not isinstance(value, unicode):
             value = str(value)
@@ -229,16 +229,10 @@ class Cell(StyleableObject):
             # time detection
             v = self._cast_time(value)
         if v is not None:
-            if return_output:
-                return (v, self.TYPE_NUMERIC)
-            else:
-                self.data_type = self.TYPE_NUMERIC
-                return v
-        
-        if return_output: # WARNING, HACKY
-            return (value, self.data_type)
-        else:
-            return value
+            self.data_type = self.TYPE_NUMERIC
+            return v
+
+        return value
 
 
     def _cast_numeric(self, value):
