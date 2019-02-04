@@ -203,19 +203,19 @@ class Cell(StyleableObject):
             elif value in self.ERROR_CODES:
                 data_type = self.TYPE_ERROR
             elif self.guess_types:
-                value = self._infer_value(value)
+                value, data_type = self._infer_value(value, data_type)
 
         elif value is not None:
             raise ValueError("Cannot convert {0!r} to Excel".format(value))
 
         if return_output:
-            return (value, data_type)
+            return value, data_type
         else:
             self.data_type = data_type
             self._value = value
 
 
-    def _infer_value(self, value):
+    def _infer_value(self, value, data_type):
         """Given a string, infer type and formatting options."""
         if not isinstance(value, unicode):
             value = str(value)
@@ -229,10 +229,10 @@ class Cell(StyleableObject):
             # time detection
             v = self._cast_time(value)
         if v is not None:
-            self.data_type = self.TYPE_NUMERIC
-            return v
+            data_type = self.TYPE_NUMERIC # Return modified data type
+            return v, data_type
 
-        return value
+        return value, data_type
 
 
     def _cast_numeric(self, value):
