@@ -202,7 +202,7 @@ class Cell(StyleableObject):
                 data_type = self.TYPE_FORMULA
             elif value in self.ERROR_CODES:
                 data_type = self.TYPE_ERROR
-            elif self.guess_types:
+            elif self.guess_types or return_output: # If returning output, always want to guess the type
                 value, data_type = self._infer_value(value, data_type)
 
         elif value is not None:
