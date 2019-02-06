@@ -1,9 +1,11 @@
-.. image:: https://coveralls.io/repos/bitbucket/openpyexcel/openpyexcel/badge.svg?branch=default
-    :target: https://coveralls.io/bitbucket/openpyexcel/openpyexcel?branch=default
+.. image:: https://coveralls.io/repos/bitbucket/openpyxl/openpyxl/badge.svg?branch=default
+    :target: https://coveralls.io/bitbucket/openpyxl/openpyxl?branch=default
     :alt: coverage status
 
 Introduction
 ------------
+
+openpyexcel is a fork of openpyxl that has some additional improvements, most notably the ability to write formula values.
 
 openpyexcel is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
 
@@ -22,7 +24,7 @@ xml attacks. To guard against these attacks install defusedxml.
 Mailing List
 ------------
 
-The user list can be found on http://groups.google.com/group/openpyexcel-users
+The user list can be found on http://groups.google.com/group/openpyxl-users
 
 
 Sample code::
@@ -50,10 +52,10 @@ Sample code::
 Documentation
 -------------
 
-The documentation is at: https://openpyexcel.readthedocs.io
+The documentation is at: https://openpyxl.readthedocs.io
 
 * installation methods
 * code examples
 * instructions for contributing
 
-Release notes: https://openpyexcel.readthedocs.io/en/stable/changes.html
+Release notes: https://openpyxl.readthedocs.io/en/stable/changes.html

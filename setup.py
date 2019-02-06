@@ -62,9 +62,9 @@ setup(
         'jdcal', 'et_xmlfile',
         ],
     project_urls={
-        'Documentation': 'https://openpyexcel.readthedocs.io/en/stable/',
-        'Source': 'https://bitbucket.org/openpyexcel/openpyexcel',
-        'Tracker': 'https://bitbucket.org/openpyexcel/openpyexcel/issues',
+        'Documentation': 'https://openpyxl.readthedocs.io/en/stable/',
+        'Source': 'https://github.com/sciris/openpyexcel',
+        'Tracker': 'https://github.com/sciris/openpyexcel/issues',
     },
     classifiers=[
                  'Development Status :: 5 - Production/Stable',
