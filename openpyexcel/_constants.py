@@ -5,8 +5,8 @@ Package medata
 """
 
 __author__ = "See AUTHORS"
-__author_email__ = "charlie.clark@clark-consulting.eu"
+__author_email__ = "info@sciris.org"
 __license__ = "MIT/Expat"
-__maintainer_email__ = "openpyexcel-users@googlegroups.com"
-__url__ = "https://openpyexcel.readthedocs.io"
+__maintainer_email__ = "info@sciris.org"
+__url__ = "https://openpyxl.readthedocs.io"
 __version__ = "2.5.14"
